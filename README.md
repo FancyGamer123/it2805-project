@@ -49,12 +49,12 @@ Lets start by creating the `apache-server` machine by running the following:
 vagrant up
 ```
 
-After the machine is up, Vagrant should display a message like below and you should be good to go.
+After the machine is up, Vagrant should display a message like below.
 ```
 ==> apache-server: Apache server is up and running at http://localhost:8080.
 ```
 
-You can now access the Apache web server by going to http://localhost:8080
+You can now access the Apache web server by going to [http://localhost:8080](http://localhost:8080) where it will serve files from your local [Documents/](Documents/) directory.
 
 
 ### Stopping, restarting and destroying the server
