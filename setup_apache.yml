@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+  - name: Install Apache
+    apt: pkg={{ item }} state=present update_cache=yes
+    with_items:
+      - apache2
+      - apache2-utils
+
+  - name: Enable Apache Server Side Include module
+    apache2_module: name=include state=present
+    notify: restart apache
+
+  - name: Set Apache to serve /var/www/it2805 as root directory
+    lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="DocumentRoot" line="DocumentRoot /var/www/it2805"
+    notify: restart apache
+
+  - name: Ensure Apache is started and enabled
+    service: name=apache2 state=started enabled=yes
+
+  handlers:
+  - name: restart apache
+    service: name=apache2 state=restarted
