@@ -13,8 +13,8 @@
     apache2_module: name=include state=present
     notify: restart apache
 
-  - name: Set Apache to serve /var/www/it2805 as root directory
-    lineinfile: dest=/etc/apache2/sites-available/000-default.conf regexp="DocumentRoot" line="DocumentRoot /var/www/it2805"
+  - name: Set default Apache site config
+    template: src=./default-site.conf dest=/etc/apache2/sites-available/000-default.conf
     notify: restart apache
 
   - name: Ensure Apache is started and enabled

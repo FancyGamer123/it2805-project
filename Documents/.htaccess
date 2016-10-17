@@ -1,0 +1,5 @@
+# Allow Server Sides Includes
+Options +Includes
+
+# Parse all files with executable bit set as SSI files
+XBitHack on

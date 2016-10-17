@@ -1,2 +1,5 @@
 # Ignore Vagrant dir
 .vagrant/
+
+# Ignore Ansible .retry files
+*.retry
