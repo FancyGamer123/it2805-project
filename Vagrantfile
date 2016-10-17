@@ -11,7 +11,7 @@ Vagrant.configure(2) do |config|
 
     # Install Apache with Ansible
     box.vm.provision :ansible_local do |a|
-      a.playbook = "setup_apache.yml"
+      a.playbook = "apache/setup_apache.yml"
     end
 
     # Post message when up and running
