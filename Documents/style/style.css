@@ -121,10 +121,96 @@ body {
 }
 footer{
   position: absolute;
-  width:100%; height:160px; 
+  width:100%; height:160px;
   bottom:0;
 
   background-color: rgba(29,31,33, 0.75);
 }
 
 
+/* POPUP STYLING */
+
+/* Styling of the modal background */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 25%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Styling of the modal  box itself */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Styling of the header of the modal */
+.modal-header {
+  padding: 0.1em 1em;
+  background-color: #e64f17;
+  color: white;
+  font-weight: bold;
+}
+
+.modal-header h3 {
+  margin: 0.5em 0;
+}
+
+/* Styling of the body of the modal */
+.modal-body {
+  padding: 0 1em;
+  color: black;
+}
+
+/* Styling of the footer of the modal */
+.modal-footer {
+  padding: 0.5em 0.5em;
+  background-color: #e64f17;
+  color: white;
+  text-align: right;
+}
+
+/* Styling of the yes/no buttons of the modal */
+.modal-button {
+  background-color: #fefefe;
+  border: none;
+  color: black;
+  padding: 0.25em 1em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
+  margin: 0.25em 0.25em;
+  cursor: pointer;
+  border-radius: 0.25em;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.modal-button:hover {
+  background-color: #b42b00;
+  color: white;
+}
+
+/* Styling of the close button on the modal */
+.close-button {
+  color: white;
+  float: right;
+  font-size: 1.5em;
+}
+
+.close-button:hover, .close-button:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
