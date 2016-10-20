@@ -1,0 +1,296 @@
+html, body{
+  height: 100%;
+  margin: 0;
+  min-width: 525px; /*must change when introduce mobile layout*/
+}
+a {
+  line-height: 1.13; /*ulike browsers har ulike line-height, slik at navbar ikke vises likt*/
+}
+h2 {
+  font-weight: normal;
+  margin-left: 10px;
+}
+body {
+  background-image: url(../images/top-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  font-family: Helvetica, Arial;
+  color: white;
+
+}
+
+/*divide the document into rows*/
+  #wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%; min-height:100%;
+    flex-direction: column;
+  }
+  #header, footer {background-color: rgba(29,31,33, 0.75)}
+  #content {flex:1;}
+
+/* bli medlem button upper right corner */
+  #bliMedlem {
+    position: absolute;
+    width: 200px; height: 200px;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none; /*no support for IE*/
+  }
+  #bliMedlem > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-sizing: border-box;
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: -50%;
+    right: -50%;
+    background-color: blue;
+    padding-bottom: 6%;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    pointer-events: auto;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  #bliMedlem > div:hover {
+    background-color: #FF621A;
+  }
+
+  #header-container {
+    height:200px;
+  }
+
+/* site-logo */
+  #logo img {
+    max-height: 140px;
+    cursor: pointer;
+  }
+  #logo h1 {
+    margin-left: 20px;
+  }
+  #logo > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @media only screen and (max-width: 1000px) {
+    #logo img {
+      width: 28.8%;
+    }
+    #logo h1 {
+      width: 260px;
+    }
+  }
+
+
+
+
+
+/* navigation bar */
+  #navbar-container {
+    margin: auto;
+    margin-top: 30px;
+  }
+  #navbar-container ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 5px;
+    overflow: hidden;
+  }
+  #navbar-container ul li {
+      float: left;
+  }
+  #navbar-container ul li:hover {
+      background-color: rgba(0,0,0,0.2);
+  }
+  #navbar-container ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin:0;
+    padding: 16px;
+  }
+
+/* container */
+
+#content-container {
+  box-sizing: border-box;
+  margin:auto;
+  margin-bottom: 25px;
+  padding: 15px 15px 30px 15px;
+  background-color: rgba(29,31,33, 0.75)
+}
+
+/* newsfeed-slideshow */
+  #newsfeed-slideshow {
+    width: 100%; padding-bottom: 50%;
+  }
+
+  #newsfeed-slideshow > div {
+    box-sizing: border-box;
+    background-color: #1d1f21;/*rgb(29,31,33)*/
+    border: 1px solid black;
+  }
+
+  #newsfeed-slideshow > div >.slideshow{
+    float: left;
+    overflow: hidden;
+    width: 65%; height: 100%;
+  }
+
+  #newsfeed-slideshow > div >.description{
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 35%; height: 100%;
+    padding: 16px;
+  }
+  #newsfeed-slideshow > div >.description:after{
+    position: absolute;
+    bottom: 0; 
+    left:0; 
+    height: 90px;
+    width: 100%;
+    content: "";
+    background: -webkit-linear-gradient(to top, rgba(29,31,33, 1) 10%,rgba(29,31,33, 0) 90%);
+    background: linear-gradient(to top, rgba(29,31,33, 1) 10%, rgba(29,31,33, 0) 90%);
+    pointer-events: none; /* so the text is still selectable */
+  }
+
+
+/* footer */
+  footer {
+    padding-bottom: 10px;
+  }
+
+  #footer-container {
+    box-sizing: border-box;
+    min-height: 160px;
+    margin: auto;
+    padding: 15px 15px 30px 15px;
+  }
+
+  .footer-section {
+    width:23%;
+    float:left;
+    margin-right: 10px;
+    min-width: 137px;
+  }
+  .footer-section ul{
+    padding-left: 20px;
+  }
+
+  .footer-section ul li a {
+    text-decoration: none;
+  }
+  .footer-section ul li a:link{color: gray;}
+  .footer-section ul li a:visited{color: LightGray;}
+  .footer-section ul li a:hover{color: white;}
+  .footer-section ul li a:active{color: LightGray;}
+
+
+  @media only screen and (max-width: 880px) {
+    .footer-section {
+      width:47%;
+      margin-right: 10px;
+    }
+  }
+
+
+
+/*-----------------*/
+/* GENERAL CLASSES */
+/*-----------------*/
+
+.container {
+  width: calc(60% + 100px);
+  max-width: 1000px;
+  margin:auto;
+}
+
+
+
+/* orange section bar */
+  .sectionbar {
+    box-sizing:border-box;
+    position: relative;
+    height: auto;
+    border: 0;
+    background: url(../images/bar.png) 0 -50px repeat-x;
+    background-size: auto 100px;
+  }
+  .sectionbar::before,
+  .sectionbar::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    width: 8px;
+    height: 100%;
+  }
+  .sectionbar::before {
+    left: -8px;
+    background: url(../images/bar.png);
+    background-size: auto 100px;
+  }
+  .sectionbar::after {
+    right: -8px;
+    background: url(../images/bar.png) 8px 0px repeat-x;
+    background-size: auto 100px;
+  }
+
+
+
+/* slideshow */
+  .slideshow {
+    overflow: hidden;
+  }
+  .slideshow > div {
+    position: relative;
+    right: 50%;
+    height: 100%;
+    width:100%;
+    text-align: center;
+  }
+
+  .slideshow > div > img {
+    display:inline-block;
+    height:100%;
+    margin-right:-100%;
+  }
+
+/*wrappers*/
+.wrapper-fixed-ratio {
+  position: relative;
+  overflow: hidden;
+}
+.wrapper-fixed-ratio > div{
+  position: absolute;
+  width: 100%; height: 100%;
+}
+
+.wrapper-vertical-center {
+  display:inline-block;
+  height:100%;
+}
+.wrapper-vertical-center:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+
