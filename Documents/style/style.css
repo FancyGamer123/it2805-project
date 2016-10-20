@@ -103,17 +103,23 @@ body {
 
 /* form bli medlem */
 
-#blimedlem input[type=text] {
-  width: 50%;
+#blimedlemForm input[type=text] {
+  width: 25%;
   padding: 2px 2px;
-  margin: 2px 0px;
+  margin: 4px 4px;
   background-color: rgba(29,31,33, 0.75);
   color: white;
-
 }
 
-#blimedlem input[type=text]:focus {
+#blimedlemForm input[type=text]:focus {
   border: 3px solid #555;
+}
+
+#blimedlemForm input[type=date]{
+  margin: 4px 4px;
+  background: rgba(29,31,33, 0.75);
+  color: white;
+  width: 25%;
 }
 
 

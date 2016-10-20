@@ -19,21 +19,27 @@
 
             <div id="container">
                 <h2>Bli medlem i Det Frie Student Gamer Laget</h2>
-                <div id="blimedlem">
+                <div id="blimedlemForm">
 
                     <form action = "mailto:haavalo@stud.ntnu.no" method="post" enctype="text/plain">
-                        <label></label><br>
-                        <input type="text" name="username" value="Brukernavn"><br>
-                        Fult navn<br>
-                        <input type="text" name="name" value="Fult navn"><br>
-                        Fødselsdato<br>
-                        <input type="text" name="dateofbirth" value="Fødselsdato"><br>
-                        Steam<br>
-                        <input type="text" name="steamURL" value="Steam URL"><br>
-                        Gamertag<br>
-                        <input type="text" name="gamertag" value="Gamertag"><br>
-                        PSN<br>
-                        <input type="text" name="psn" value="PSN"><br>
+
+                        <label for="username">Brukernavn</label><br>
+                        <input type="text" name="username" id="username" value="Brukernavn"><br>
+
+                        <label for="realName">Fult navn</label><br>
+                        <input type="text" name="realName" id="realName" value="Fult navn"><br>
+
+                        <label for="birthday">Fødselsdato</label><br>
+                        <input type="date" name="dateofbirth" id="birthday" value="Fødselsdato"><br>
+
+                        <label for="steamURL">Steam URL</label><br>
+                        <input type="text" name="steamURL" id="steamURL" value="Steam URL"><br>
+
+                        <label for="gamertag">Gamertag</label><br>
+                        <input type="text" name="gamertag" id="gamertag" value="Gamertag"><br>
+
+                        <label for="psn">PSN</label><br>
+                        <input type="text" name="psn" id="psn" value="PSN"><br>
 
                         <input type="submit" value="Send">
                         <input type="reset" value="Reset">
