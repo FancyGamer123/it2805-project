@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <title>IT2805: P3 Design Changes</title>
+        <meta charset="utf-8" />
+
+        <style>
+            body {
+                color: #333;
+                line-height: 150%;
+            }
+
+            article, #cover {
+                width: 960px;
+                margin: auto;
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 3em;
+                margin-bottom: 0;
+            }
+
+            p {
+                max-width: 75ch;
+            }
+
+            p, blockquote, ul, ol {
+                font-size: 1em;
+                line-height: 1.5em;
+            }
+
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: separate;
+                empty-cells: hide;
+            }
+
+        </style>
+    </head>
+    <body>
+        <article>
+            <header>
+                <h1>IT2805: P3 Design Changes</h1>
+                <p>Av: Timmy Tran, Hendrik Dahle, Håvard Løkensgard, Sandor Zeestraten</p>
+                <p>Publisert: <time datetime="2016-11-12">12 November, 2016</time></p>
+            </header>
+
+            <hr>
+
+            <section>
+                <h2>2. Administrative detaljer</h2>
+                <ul>
+                    <li><strong>Kundenavn:</strong> Olga Pedersen</li>
+                    <li><strong>Organisasjon:</strong> Det Frie Student Gamer Laget</li>
+                    <li><strong>Link til siden:</strong> <a href="http://folk.ntnu.no/tonytt/Documents/index.html">http://folk.ntnu.no/tonytt/Documents/index.html</a></li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Endringer</h2>
+
+                <h3>joinuspopup.js</h3>
+                <p>Endret til å vise bli medlem popup-en først etter 4 page views og så aldri igjen.</p>
+
+                <h3>Javascript krav 4: joinuspopup.js</h3>
+                <p>Oppfylt av Sandor.</p>
+            </section>
+
+            <section>
+                <h2>4. Oppdatert plan</h2>
+
+                <h3>Endelig filstruktur</h3>
+                <ul>
+                    <li>index.html</li>
+                    <li>artikler.html</li>
+                    <li>kontakt.html</li>
+                    <li>galleri.html</li>
+                    <li>info.html</li>
+                    <li>omtaler.html</li>
+                    <li>blimedlem.html</li>
+                    <li>faq.html</li>
+                    <li>
+                        templates/
+                        <ul>
+                            <li>joinuspopup.html</li>
+                        </ul>
+                    </li>
+                    <li>
+                        css/
+                        <ul>
+                            <li>style.css</li>
+                        </ul>
+                    </li>
+                    <li>
+                        images/
+                        <ul>
+                            <li>logo.png</li>
+                            <li>background.png</li>
+                            <li>info.png</li>
+                            <li>galleri_1.png</li>
+                            <li>...</li>
+                            <li>galleri_5.png</li>
+                        </ul>
+                    </li>
+                    <li>
+                        js/
+                        <ul>
+                            <li>formvalidator.js</li>
+                            <li>dropdownmenu.js</li>
+                            <li>leetspeak.js</li>
+                            <li>joinuspopup.js</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Endelig arbeidsfordeling</h3>
+                <table>
+                    <tr>
+                        <th>Filnavn</th>
+                        <th>Beskrivelse</th>
+                        <th>Ansvarlig</th>
+                        <th>Deadline</th>
+                    </tr>
+                    <tr>
+                        <td>index.html</td>
+                        <td>Hjemmesiden</td>
+                        <td>Timmy</td>
+                        <td>20.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>artikler.html</td>
+                        <td>Artikler om spill</td>
+                        <td>Henrik</td>
+                        <td>20.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>kontakt.html</td>
+                        <td>Kontaktinformasjon til laget</td>
+                        <td>Håvard</td>
+                        <td>20.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>galleri.html</td>
+                        <td>Galleri med bilder av spill</td>
+                        <td>Sandor</td>
+                        <td>20.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>info.html</td>
+                        <td>Informasjon om laget</td>
+                        <td>Timmy</td>
+                        <td>27.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>omtaler.html</td>
+                        <td>Omtaler av spill</td>
+                        <td>Henrik</td>
+                        <td>27.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>blimedlem.html</td>
+                        <td>Hvordan bli medlem</td>
+                        <td>Håvard</td>
+                        <td>27.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>faq.html</td>
+                        <td>Ofte stilte spørsmål</td>
+                        <td>Sandor</td>
+                        <td>27.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>style.css</td>
+                        <td>CSS stylesheet</td>
+                        <td>Alle</td>
+                        <td>03.11.16</td>
+                    </tr>
+                    <tr>
+                        <td>logo.png</td>
+                        <td>Logoen til laget</td>
+                        <td>Håvard</td>
+                        <td>20.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>background.png</td>
+                        <td>Bakgrunnsbilde for alle sidene</td>
+                        <td>Håvard</td>
+                        <td>20.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>formvalidator.js</td>
+                        <td>JS for å validere kontakskjemaet</td>
+                        <td>Timmy</td>
+                        <td>03.11.16</td>
+                    </tr>
+                    <tr>
+                        <td>dropdownmenu.js</td>
+                        <td>JS for å lage en drop-down meny i navigasjonsbaren</td>
+                        <td>Henrik</td>
+                        <td>03.11.16</td>
+                    </tr>
+                    <tr>
+                        <td>leetspeak.js</td>
+                        <td>JS for konvertere teksten på siden til leetspeak</td>
+                        <td>Håvard</td>
+                        <td>03.11.16</td>
+                    </tr>
+                    <tr>
+                        <td>joinuspopup.js</td>
+                        <td>JS for å lage en pop up til nye besøkende</td>
+                        <td>Sandor</td>
+                        <td>03.11.16</td>
+                    </tr>
+                </table>
+            </section>
+
+        </article>
+    </body>
+</html>
