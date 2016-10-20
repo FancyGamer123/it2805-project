@@ -128,6 +128,18 @@ footer{
 }
 
 
+/* FAQ STYLING */
+ul#faq > li {
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+ul#faq > li > ul > li {
+  font-weight: normal;
+  font-style: italic;
+}
+
+
 /* POPUP STYLING */
 
 /* Styling of the modal background */
