@@ -124,7 +124,64 @@ body {
     margin: 0;
     padding: 16px;
   }
-
+	#dropdownbar  {
+		color: white;
+		display: block;
+		text-decoration: none;
+		text-align: center;
+		margin: 0;
+		padding: 16px;
+		z-index: 666;
+		}
+	#dropdownbar-content {
+		width: 100px;
+		height: auto;
+		display: none; 
+		margin: auto !important;
+		overflow: visible !important;
+		padding: 0;
+		position: relative;
+		right: 10px;	
+		}
+	#dropdownbar-content ul li {
+		border: none;		
+		background: linear-gradient(#f88327, #f43127);
+		position: relative;
+		right: 30px;
+		bottom: 10px;
+		text-align: left !important;
+		width: 120px;
+		}
+	#dropdownbar-content ul li a {
+		text-align: left;
+		}
+	#dropdownbar-content ul li:hover {
+		background: rgba(29,31,33, 0.75);
+		}
+	#dropdownbar:hover #dropdownbar-content {
+		display: block;
+		}
+	#dropdownbar:hover {
+		position:relative;
+		top: 135px;
+		}
+	#navbar-container ul{
+		overflow: visible;
+		}
+	div#dropdownbar:hover > li {
+		background: rgba(0, 0, 0, 0.2);
+		width: 120px;
+		height: 50px;
+		margin: 0;
+		position: relative;
+		bottom: 10px;
+		right: 25px;
+		}
+	#dropdownbar:hover #knot {
+		position: relative;
+		top: 15px;
+		right: 7px;
+		}
 /* container */
 
 #main-content-container {
