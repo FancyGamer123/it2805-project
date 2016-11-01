@@ -400,6 +400,13 @@ ul#faq > li > ul > li {
     border: 3px solid #555;
 }
 
+#reason-to-contact{
+  padding: 2px 2px;
+  margin: 4px 4px;
+  background-color: rgba(29,31,33, 0.75);
+  color: white;
+}
+
 /* POPUP STYLING */
 
 /* Styling of the modal background */
