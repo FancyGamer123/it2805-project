@@ -30,6 +30,16 @@ if (fileName == "index.html" || fileName == ""){
 	let ss1 = new Slideshow(slideshow, imageList, description, descriptionList, linkList);
 
 }
+else if (fileName == "galleri.html"){
+	let slideshow = document.querySelector("#gallery1 .slideshow");
+	let imageRelativePath = "articles/images/";
+	let imageList = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"];
+
+	for (let i = 0; i < imageList.length; i++){
+		imageList[i] = imageRelativePath + imageList[i];
+	}
+	let ss = new Slideshow(slideshow, imageList);
+}
 
 
 
