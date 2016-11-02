@@ -1,0 +1,1 @@
+The website should work on Chrome 53, Firefox 48, Safari 9 and Microsoft Edge
