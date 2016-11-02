@@ -19,7 +19,7 @@ Vagrant.configure(2) do |config|
 
     # Virtualbox settings
     box.vm.provider "virtualbox" do |v|
-      v.memory = 512
+      v.memory = 256
     end
   end
 end

@@ -1,0 +1,81 @@
+<!--
+FILENAME: blimedlem.html
+WRITTEN BY: Håvard Løkensgard
+WHEN: 2016-11-01
+PURPOSE: This is the join us site. The user will find information on how to become a member of
+FSG. The user can send us an information about themself on mail and then become a memeber.
+-->
+
+<!DOCTYPE HTML>
+<html lang="no">
+	<head>
+		<title>Det Frie Student Gamer Laget</title>
+		<link rel="stylesheet" href="style/style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="js/leetspeak.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="bliMedlem">
+					<div onclick="convertToLeet()">Bli Medlem!</div>
+				</div>
+				<div id="header-container" class="container">
+					<div id="logo" class="wrapper-valign-center">
+						<img src="images/logo-large2.png" onclick="location.href='index.html'">
+						<h1>Det Frie Student Gamer Laget</h1>
+					</div>
+				</div>
+			</div>
+			<div id="navbar">
+				<div id="navbar-container" class="sectionbar container">
+					<ul class="wrapper-valign-center">
+						<li><a href="index.html">Hjem</a></li>
+						<li><a href="artikler.html">Artikler</a></li>
+						<li><a href="omtaler.html">Omtaler</a></li>
+						<li><a href="info.html">Om Oss</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="main-content">
+				<div id="main-content-container" class="container">
+					<div id="blimedlemForm">
+						<form action="mailto:haavalo@stud.ntnu.no" method="post" enctype="text/plain">
+
+							<label for="username">Brukernavn</label><br>
+							<input type="text" name="username" id="username" value="" required><br>
+
+							<label for="realName">Fult navn</label><br>
+							<input type="text" name="realName" id="realName" value="" required><br>
+
+							<label for="birthday">Fødselsdato</label><br>
+							<input type="date" name="dateofbirth" id="birthday" value="" required><br>
+
+							<label for="email">Email</label><br>
+							<input type="email" name="email" id="email" value="" required><br>
+
+							<label for="steamURL">Steam URL</label><br>
+							<input type="url" name="steamURL" id="steamURL" value="" required><br>
+
+							<label for="gamertag">Gamertag</label><br>
+							<input type="text" name="gamertag" id="gamertag" value="" required><br>
+
+							<label for="psn">PSN</label><br>
+							<input type="text" name="psn" id="psn" value="" required><br>
+
+							<input type="submit" value="Send">
+
+						</form>
+					</div>
+				</div>
+			</div>
+
+			<!-- FOOTER -->
+			<!--#include virtual="templates/footer.html" -->
+
+			<!-- POPUP -->
+			<!--#include virtual="templates/joinuspopup.html" -->
+			<script src="js/joinuspopup.js"></script>
+		</div>
+	</body>
+</html>

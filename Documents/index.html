@@ -4,12 +4,13 @@
 		<title>Det Frie Student Gamer Laget</title>
 		<link rel="stylesheet" href="style/style_fixes_slideshow.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="js/leetspeak.js" charset="utf-8"></script>
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="header">
-				<div id="bliMedlem" >
-					<div onclick="bliMedlem()">Bli Medlem!</div>
+				<div id="bliMedlem">
+					<div onclick="convertToLeet()">Bli Medlem!</div>
 				</div>
 				<div id="header-container" class="container">
 					<div id="logo" class="wrapper-valign-center">
@@ -21,10 +22,10 @@
 			<div id="navbar">
 				<div id="navbar-container" class="sectionbar container">
 					<ul class="wrapper-valign-center">
-					  <li><a href="index.html">Hjem</a></li>
-					  <li><a href="artikler.html">Artikler</a></li>
-					  <li><a href="omtaler.html">Omtaler</a></li>
-					  <li><a href="info.html">Om Oss</a></li>
+						<li><a href="index.html">Hjem</a></li>
+						<li><a href="artikler.html">Artikler</a></li>
+						<li><a href="omtaler.html">Omtaler</a></li>
+						<li><a href="info.html">Om Oss</a></li>
 					</ul>
 				</div>
 			</div>
@@ -53,14 +54,13 @@
 									<p>Denne måneden har det kommet ut mange nye spill fra de berømte spillseriene...
 									</p>
 								</li>
-								
+
 							</ul>
 						</div>
 
 					</div>
 				</div>
 			</div>
-
 			<footer>
 				<div id="footer-container" class="container">
 					<div class="footer-section">
@@ -93,7 +93,13 @@
 					</div>
 				</div>
 			</footer>
+			<!-- FOOTER -->
+			<!--#include virtual="templates/footer.html" -->
+
+			<!-- POPUP -->
+			<!--#include virtual="templates/joinuspopup.html" -->
 		</div>
+		<script src="js/joinuspopup.js"></script>
 		<script src="js/slideshow.js"></script>
 	</body>
 </html>

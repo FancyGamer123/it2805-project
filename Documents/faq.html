@@ -1,61 +1,87 @@
+<!--
+FILENAME: faq.html
+WRITTEN BY: Sandor Zeestraten
+WHEN: 2016-10-20
+PURPOSE: This is the FAQ page which has questions and answers about FSG.
+-->
+
 <!DOCTYPE HTML>
 <html lang="no">
-  <head>
-    <title>Det Frie Student Gamer Laget</title>
-    <link rel="stylesheet" href="style/style.css">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  </head>
-  <body>
-    <div class="wrapper">
-      <div id="top-banner"></div>
-      <div id="navbar" class="sectionbar">
-        <ul>
-          <li><a href="index.html">Hjem</a></li>
-          <li><a href="artikler.html">Artikler</a></li>
-          <li><a href="omtaler.html">Omtaler</a></li>
-          <li><a href="info.html">Om Oss</a></li>
-        </ul>
-      </div>
+	<head>
+		<title>Det Frie Student Gamer Laget</title>
+		<link rel="stylesheet" href="style/style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="js/leetspeak.js" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="bliMedlem">
+					<div onclick="convertToLeet()">Bli Medlem!</div>
+				</div>
+				<div id="header-container" class="container">
+					<div id="logo" class="wrapper-valign-center">
+						<img src="images/logo-large2.png" onclick="location.href='index.html'">
+						<h1>Det Frie Student Gamer Laget</h1>
+					</div>
+				</div>
+			</div>
+			<div id="navbar">
+				<div id="navbar-container" class="sectionbar container">
+					<ul class="wrapper-valign-center">
+						<li><a href="index.html">Hjem</a></li>
+						<li><a href="artikler.html">Artikler</a></li>
+						<li><a href="omtaler.html">Omtaler</a></li>
+						<li><a href="info.html">Om Oss</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="main-content">
+				<div id="main-content-container" class="container">
+					<h2>FAQ</h2>
+					<p>Velkommen til FAQ (Frequently Asked Questions). Her finner du ofte stilte spørsmål og svar angående FSG.</p>
 
-      <div id="container">
-        <h2>FAQ</h2>
-        <p>Velkommen til FAQ (Frequently Asked Questions). Her finner du ofte stilte spørsmål og svar angående FSG.</p>
+					<ul id="faq">
+						<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit?
+							<ul>
+								<li>Integer nec odio.</li>
+							</ul>
+						</li>
 
-        <ul id="faq">
-          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit?
-            <ul>
-              <li>Integer nec odio.</li>
-            </ul>
-          </li>
+						<li>Nulla quis sem at nibh elementum imperdiet?
+							<ul>
+								<li>Vestibulum lacinia arcu eget nulla.</li>
+							</ul>
+						</li>
 
-          <li>Nulla quis sem at nibh elementum imperdiet?
-            <ul>
-              <li>Vestibulum lacinia arcu eget nulla.</li>
-            </ul>
-          </li>
+						<li>Aenean eget diam ac lacus venenatis luctus. Vivamus lorem elit, pretium volutpat vestibulum vitae, consequat in turpis?
+							<ul>
+								<li>Fusce aliquet bibendum ipsum, id efficitur ante. Nam volutpat turpis ut lobortis dictum.</li>
+							</ul>
+						</li>
 
-          <li>Aenean eget diam ac lacus venenatis luctus. Vivamus lorem elit, pretium volutpat vestibulum vitae, consequat in turpis?
-            <ul>
-              <li>Fusce aliquet bibendum ipsum, id efficitur ante. Nam volutpat turpis ut lobortis dictum.</li>
-            </ul>
-          </li>
+						<li>Suspendisse ut nisl sagittis, mollis nunc quis, hendrerit risus?
+							<ul>
+								<li>Quisque facilisis lacus eget tellus congue dapibus. Proin dictum tempus ipsum.</li>
+							</ul>
+						</li>
 
-          <li>Suspendisse ut nisl sagittis, mollis nunc quis, hendrerit risus?
-            <ul>
-              <li>Quisque facilisis lacus eget tellus congue dapibus. Proin dictum tempus ipsum.</li>
-            </ul>
-          </li>
+						<li>Praesent purus ante, convallis vel ligula a, fermentum rhoncus purus. Etiam tempus auctor augue sit amet auctor. Mauris volutpat mauris quam, sed hendrerit lectus dictum nec?
+							<ul>
+								<li>Suspendisse potenti.</li>
+							</ul>
+						</li>
+					</ul>
 
-          <li>Praesent purus ante, convallis vel ligula a, fermentum rhoncus purus. Etiam tempus auctor augue sit amet auctor. Mauris volutpat mauris quam, sed hendrerit lectus dictum nec?
-            <ul>
-              <li>Suspendisse potenti.</li>
-            </ul>
-          </li>
-        </ul>
+				</div>
+			</div>
 
-      </div>
+			<!-- FOOTER -->
+			<!--#include virtual="templates/footer.html" -->
 
-      <footer></footer>
-    </div>
-  </body>
+			<!-- POPUP -->
+			<!--#include virtual="templates/joinuspopup.html" -->
+			<script src="js/joinuspopup.js"></script>
+		</div>
+	</body>
 </html>
