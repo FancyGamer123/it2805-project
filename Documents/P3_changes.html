@@ -60,11 +60,58 @@
             <section>
                 <h2>3. Endringer</h2>
 
-                <h3>joinuspopup.js</h3>
-                <p>Endret til å vise bli medlem popup-en først etter 4 page views og så aldri igjen.</p>
+                <!-- ENDRINGER PÅ FILER -->
+                <h3>Endringer på index.html</h3>
+                <p>Endret </p>
+
+                <h3>Endringer på blimedlem.html</h3>
+                <p>Endret </p>
+
+                <h3>Endringer på faq.html</h3>
+                <p>Endret </p>
+
+                <h3>Endringer på galleri.html</h3>
+                <p>Endret </p>
+
+                <h3>Endringer på info.html</h3>
+                <p>Endret </p>
+
+                <h3>Endringer på omtaler.html</h3>
+                <p>Endret </p>
+
+                <h3>Endringer på kontakt.html</h3>
+                <p>Endret til kontaktoss.html og fjernet kartet som viser lokasjonen til laget da det allerede finnes i footeren.</p>
+
+                <h3>Endringer på joinuspopup.js</h3>
+                <p>Endret til å vise popup-en først etter 4 page views og så aldri igjen for å unngå å plage brukeren.</p>
+
+                <!-- ENDRINGER PÅ STYLE -->
+                <h3>TODO: Endringer på styling</h3>
+                <ul>
+                    <li>Font: Arial, Helvetica, sans-serif for både header, body og footer</li>
+                    <li>Color scheme: Mørke farger for nettsiden generelt</li>
+                    <li>Body width: 75%</li>
+                    <li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
+                    <li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
+                    <li>Background Image: Gaming relatert bilde som dekker siden</li>
+                </ul>
+
+                <!-- KRAV -->
+                <h3>TODO: Javascript krav 1: articleloader.js</h3>
+                <p>Timmy har oppfylt kravet av å dynamisk laste inn artikler.</p>
+
+                <h3>Javascript krav 2: leetspeak.js</h3>
+                <p>Håvard har oppfylt JavaScript-kravet med å implementere en easter egg på siden som konverterer noe av teksten til Leetspeak.</p>
+
+                <h3>Javascript krav 3: slideshow.js</h3>
+                <p>Timmy har oppfylt JavaScript-kravet med å implementere en dynamisk slideshow for å vise både bilder og artikeltekst.</p>
 
                 <h3>Javascript krav 4: joinuspopup.js</h3>
-                <p>Oppfylt av Sandor.</p>
+                <p>Sandor har oppfylt JavaScript-kravet med å implementere en enkel popup som vises for nye besøkende for å appellere dem til å bli medlem.</p>
+
+                <h3>Modulæritets krav:</h3>
+                <p>Vi har brukt en kombinasjon av Apache SSI og JavaScript for å oppfylle modulæritets-kravet. For Apache så brukes header.html, footer.html og joinuspopup.html på alle sidene. For JavaScript så brukes det for laste inn bilder i slideshow og artikler.
+                </p>
             </section>
 
             <section>
@@ -74,7 +121,7 @@
                 <ul>
                     <li>index.html</li>
                     <li>artikler.html</li>
-                    <li>kontakt.html</li>
+                    <li>kontaktoss.html</li>
                     <li>galleri.html</li>
                     <li>info.html</li>
                     <li>omtaler.html</li>
@@ -83,6 +130,8 @@
                     <li>
                         templates/
                         <ul>
+                            <li>header.html</li>
+                            <li>footer.html</li>
                             <li>joinuspopup.html</li>
                         </ul>
                     </li>
@@ -93,21 +142,46 @@
                         </ul>
                     </li>
                     <li>
+                        arcticles/
+                        <ul>
+                            <li>
+                                images/
+                                <ul>
+                                    <li>1.jpg</li>
+                                    <li>...</li>
+                                    <li>6.jpg</li>
+                                </ul>
+                            </li>
+                            <li>
+                                texts/
+                                <ul>
+                                    <li>1.xml</li>
+                                    <li>...</li>
+                                    <li>5.xml</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        buttons/
+                        <ul>
+                            <li>arrow_next.svg</li>
+                            <li>arrow_prev.svg</li>
+                        </ul>
+                    </li>
+                    <li>
                         images/
                         <ul>
                             <li>logo.png</li>
                             <li>background.png</li>
-                            <li>info.png</li>
-                            <li>galleri_1.png</li>
-                            <li>...</li>
-                            <li>galleri_5.png</li>
+                            <li>info_page.jpg</li>
                         </ul>
                     </li>
                     <li>
                         js/
                         <ul>
-                            <li>formvalidator.js</li>
-                            <li>dropdownmenu.js</li>
+                            <li>slideshow.js</li>
+                            <li>articleloader.js</li>
                             <li>leetspeak.js</li>
                             <li>joinuspopup.js</li>
                         </ul>
@@ -120,97 +194,106 @@
                         <th>Filnavn</th>
                         <th>Beskrivelse</th>
                         <th>Ansvarlig</th>
-                        <th>Deadline</th>
                     </tr>
                     <tr>
                         <td>index.html</td>
                         <td>Hjemmesiden</td>
                         <td>Timmy</td>
-                        <td>20.10.16</td>
                     </tr>
                     <tr>
                         <td>artikler.html</td>
                         <td>Artikler om spill</td>
                         <td>Henrik</td>
-                        <td>20.10.16</td>
                     </tr>
                     <tr>
-                        <td>kontakt.html</td>
+                        <td>kontaktoss.html</td>
                         <td>Kontaktinformasjon til laget</td>
                         <td>Håvard</td>
-                        <td>20.10.16</td>
                     </tr>
                     <tr>
                         <td>galleri.html</td>
                         <td>Galleri med bilder av spill</td>
-                        <td>Sandor</td>
-                        <td>20.10.16</td>
+                        <td>Timmy</td>
                     </tr>
                     <tr>
                         <td>info.html</td>
                         <td>Informasjon om laget</td>
-                        <td>Timmy</td>
-                        <td>27.10.16</td>
+                        <td>Sandor</td>
                     </tr>
                     <tr>
                         <td>omtaler.html</td>
                         <td>Omtaler av spill</td>
                         <td>Henrik</td>
-                        <td>27.10.16</td>
                     </tr>
                     <tr>
                         <td>blimedlem.html</td>
                         <td>Hvordan bli medlem</td>
                         <td>Håvard</td>
-                        <td>27.10.16</td>
                     </tr>
                     <tr>
                         <td>faq.html</td>
                         <td>Ofte stilte spørsmål</td>
                         <td>Sandor</td>
-                        <td>27.10.16</td>
+                    </tr>
+                    <tr>
+                        <td>header.html</td>
+                        <td>SSI template for header på alle sidene</td>
+                        <td>Timmy</td>
+                    </tr>
+                    <tr>
+                        <td>footer.html</td>
+                        <td>SSI template for footer på alle sidene</td>
+                        <td>Sandor</td>
+                    </tr>
+                    <tr>
+                        <td>joinuspopup.html</td>
+                        <td>SSI template for popupen på alle sidene</td>
+                        <td>Sandor</td>
+                    </tr>
+                    <tr>
+                        <td>articles/texts/*.xml</td>
+                        <td>Placeholder XML artikler</td>
+                        <td>Timmy</td>
+                    </tr>
+                    <tr>
+                        <td>buttons/arrow_next.svg, buttons/arrow_prev.svg</td>
+                        <td>SVG grafikk for piler frem og tilbake for slideshows</td>
+                        <td>Timmy</td>
                     </tr>
                     <tr>
                         <td>style.css</td>
-                        <td>CSS stylesheet</td>
+                        <td>CSS stylesheet for siden</td>
                         <td>Alle</td>
-                        <td>03.11.16</td>
                     </tr>
                     <tr>
                         <td>logo.png</td>
                         <td>Logoen til laget</td>
-                        <td>Håvard</td>
-                        <td>20.10.16</td>
+                        <td>Timmy</td>
                     </tr>
                     <tr>
                         <td>background.png</td>
                         <td>Bakgrunnsbilde for alle sidene</td>
                         <td>Håvard</td>
-                        <td>20.10.16</td>
                     </tr>
                     <tr>
-                        <td>formvalidator.js</td>
-                        <td>JS for å validere kontakskjemaet</td>
+                        <td>slideshow.js</td>
+                        <td>JS for å lage dynamiske slideshows</td>
                         <td>Timmy</td>
-                        <td>03.11.16</td>
                     </tr>
                     <tr>
-                        <td>dropdownmenu.js</td>
-                        <td>JS for å lage en drop-down meny i navigasjonsbaren</td>
+                        <td>articleloader.js</td>
+                        <td>JS for å dynamisk vise frem artikler</td>
                         <td>Henrik</td>
-                        <td>03.11.16</td>
                     </tr>
                     <tr>
                         <td>leetspeak.js</td>
                         <td>JS for konvertere teksten på siden til leetspeak</td>
                         <td>Håvard</td>
-                        <td>03.11.16</td>
                     </tr>
                     <tr>
                         <td>joinuspopup.js</td>
                         <td>JS for å lage en pop up til nye besøkende</td>
                         <td>Sandor</td>
-                        <td>03.11.16</td>
                     </tr>
                 </table>
             </section>
