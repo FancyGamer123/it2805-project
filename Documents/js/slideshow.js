@@ -274,7 +274,6 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 	/*inside addEventListeners, "this" changes to that specific element listening for events.
 	so i have to store this in that for later use*/
     var that = this; 
-
     if (this.description != ""){ //if a description is wanted
     	//create new methods for later use
 		this.loadFileToElement = function(filepath, element){
@@ -284,7 +283,8 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 				if (this.readyState == 4 && this.status == 200){
 					//when the file is ready without errors
 					//put the retrieved text into the element
-					element.innerHTML = this.responseText; 
+					element.innerHTML = this.responseText;
+					//console.log(element.querySelector('title').innerHTML);
 				}
 			};
 			xhttp.open("GET", filepath, true);
@@ -321,8 +321,9 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 			var currentIndex = this.getCurrentIndex();
 			var desiredDirection = "";
 			var direction = "";
-			if (currentIndex == index) //don't move when pressing the same index dot
-				console.log("no moving desired");
+			if (currentIndex == index) { //don't move when pressing the same index dot
+				//console.log("no moving desired");
+			}
 			else if (currentIndex < index) {
 				// load the file and put it into the description.
 				this.loadFileToElement(this.descList[index], articles[2]); //right desc changes the content
@@ -443,7 +444,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 
 	/*
 Here is the code I made, and then I changed the slideshow to an object instead.
-Because to many global functions are bad practice.
+Because too many global functions are bad practice.
 
 
 

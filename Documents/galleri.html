@@ -18,27 +18,9 @@ PURPOSE:
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="header">
-				<div id="bliMedlem" >
-					<div onclick="bliMedlem()">Bli Medlem!</div>
-				</div>
-				<div id="header-container" class="container">
-					<div id="logo" class="wrapper-valign-center">
-						<img src="images/logo-large2.png" onclick="location.href='index.html'">
-						<h1>Det Frie Student Gamer Laget</h1>
-					</div>
-				</div>
-			</div>
-			<div id="navbar">
-				<div id="navbar-container" class="sectionbar container">
-					<ul class="wrapper-valign-center">
-					  <li><a href="index.html">Hjem</a></li>
-					  <li><a href="artikler.html">Artikler</a></li>
-					  <li><a href="omtaler.html">Omtaler</a></li>
-					  <li><a href="info.html">Om Oss</a></li>
-					</ul>
-				</div>
-			</div>
+			<!-- HEADER -->
+			<!--#include virtual="templates/header.html" -->
+
 			<div id="main-content">
 				<div id="main-content-container" class="container">
 					<h2>Galleri</h2>
@@ -50,41 +32,13 @@ PURPOSE:
 					</div>
 				</div>
 			</div>
+			<!-- FOOTER -->
+			<!--#include virtual="templates/footer.html" -->
 
-			<footer>
-				<div id="footer-container" class="container">
-					<div class="footer-section">
-						<h3>Mer Info:</h3>
-						<ul>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<h3>Følg oss:</h3>
-						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Snapchat</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<h3>Kontakt oss:</h3>
-						<ul>
-							<li><a>Tlf: +47 99999999</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Slack</a></li>
-							<li><a>Adresse</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<div class="footer-map">
-						</div>
-					</div>
-				</div>
-			</footer>
+			<!-- POPUP -->
+			<!--#include virtual="templates/joinuspopup.html" -->
+			<script src="js/joinuspopup.js"></script>
+			<script src="js/slideshow.js"></script>
 		</div>
-		<script src="js/slideshow.js"></script>
 	</body>
 </html>

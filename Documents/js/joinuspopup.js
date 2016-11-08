@@ -2,7 +2,7 @@
 FILENAME: joinuspopup.js
 WRITTEN BY: Sandor Zeestraten
 WHEN: 2016-10-17
-PURPOSE: Display a popup for after 5 page views prompting them to join the club.
+PURPOSE: Display a popup for after 4 page views prompting them to join the club.
 Sets a cookie for returning visitors so they do not get annoyed with popups on every pageview.
 CREDITS: Inspired by the Animated Modal with Header and Footer example from W3Schools.
 URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
