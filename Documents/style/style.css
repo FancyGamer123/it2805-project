@@ -95,10 +95,12 @@ body {
   }
 
 
-
-
-
 /* navigation bar */
+/*
+PURPOSE: Add a clickable dropdown menu with CSS and JS.
+CREDITS: The code is a lightly modified version from the Dropdown Menu in Navbar example from W3Schools.
+URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
+*/
   #navbar-container {
     margin: auto;
     margin-top: 30px;
@@ -113,77 +115,42 @@ body {
   #navbar-container ul li {
     float: left;
   }
-  #navbar-container ul li:hover {
-    background-color: rgba(0,0,0,0.2);
-  }
-  #navbar-container ul li a {
+  #navbar-container ul li a, .dropbtn {
+    display: inline-block;
     color: white;
-    display: block;
-    text-decoration: none;
     text-align: center;
-    margin: 0;
-    padding: 16px;
+    padding: 16px 16px;
+    text-decoration: none;
   }
-	#dropdownbar  {
-		color: white;
-		display: block;
-		text-decoration: none;
-		text-align: center;
-		margin: 0;
-		padding: 16px;
-		z-index: 666;
-		}
-	#dropdownbar-content {
-		width: 100px;
-		height: auto;
-		display: none; 
-		margin: auto !important;
-		overflow: visible !important;
-		padding: 0;
-		position: relative;
-		right: 10px;	
-		}
-	#dropdownbar-content ul li {
-		border: none;		
-		background: linear-gradient(#f88327, #f43127);
-		position: relative;
-		right: 30px;
-		bottom: 10px;
-		text-align: left !important;
-		width: 120px;
-		}
-	#dropdownbar-content ul li a {
-		text-align: left;
-		}
-	#dropdownbar-content ul li:hover {
-		background: rgba(29,31,33, 0.75);
-		}
-	#dropdownbar:hover #dropdownbar-content {
-		display: block;
-		}
-	#dropdownbar:hover {
-		position:relative;
-		top: 135px;
-		}
-	#navbar-container ul{
-		overflow: visible;
-		}
-	div#dropdownbar:hover > li {
-		background: rgba(0, 0, 0, 0.2);
-		width: 120px;
-		height: 50px;
-		margin: 0;
-		position: relative;
-		bottom: 10px;
-		right: 25px;
-		}
-	#dropdownbar:hover #knot {
-		position: relative;
-		top: 15px;
-		right: 7px;
-		}
-/* container */
+  #navbar-container li a:hover, .dropdown:hover .dropbtn {
+    background: rgba(29,31,33, 0.25);
+  }
+  #navbar-container li.dropdown {
+    display: inline-block;
+  }
+  #navbar-container .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  #navbar-container .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+  }
+  #navbar-container .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  #navbar-container .show {
+    display:block;
+  }
 
+
+/* container */
 #main-content-container {
   box-sizing: border-box;
   margin:auto;
@@ -219,8 +186,8 @@ body {
   }
   #newsfeed-slideshow > div >.description:after{
     position: absolute;
-    bottom: 0; 
-    left:0; 
+    bottom: 0;
+    left:0;
     height: 90px;
     width: 100%;
     content: "";
@@ -249,7 +216,7 @@ body {
 
 #nye-artikler > .sectionbar > div {
   margin-left: 16px;
-  
+
 }
 
 #nye-artikler > .content {
