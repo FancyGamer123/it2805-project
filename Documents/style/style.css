@@ -202,16 +202,16 @@ PURPOSE:
   }
 
 
-/* container */
-#main-content-container {
-  box-sizing: border-box;
-  margin:auto;
-  margin-bottom: 25px;
-  padding: 15px 15px 30px 15px;
-  background-color: rgba(29,31,33, 0.75);
-}
+/* main-content-container, Written by: Tony Timmy Tran */
+  #main-content-container {
+    box-sizing: border-box;
+    margin:auto;
+    margin-bottom: 25px;
+    padding: 15px 15px 30px 15px;
+    background-color: rgba(29,31,33, 0.75);
+  }
 
-/* newsfeed-slideshow */
+/* newsfeed-slideshow, Written by: Tony Timmy Tran */
   #newsfeed-slideshow {
     width: 100%; padding-bottom: 50%;
   }
@@ -249,7 +249,7 @@ PURPOSE:
   }
 
 
-/* sections */
+/* sections, Written by: Tony Timmy Tran */
   .columns {
     display: inline-block;
     width:100%;
