@@ -1,37 +1,56 @@
-html, body{
-  height: 100%;
-  margin: 0;
-  min-width: 525px; /*must change when introducing mobile layout*/
-}
-a {
-  line-height: 1.13; /*ulike browsers har ulike line-height, så dette må brukes for at ting skal se likt ut*/
-}
-h2 {
-  font-weight: normal;
-  margin-left: 10px;
-}
-body {
-  background-image: url(../images/top-bg.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-color: black;
-  font-family: Helvetica, Arial, sans-serif;
-  color: white;
-}
+/*
+FILE NAME: style/style.css
+WRITTEN BY: Henrik Ove Karlsen Dahle, Håvard Løkensgard, Sandor Zeestraten, Tony Timmy Tran
+START DATE: 11.10.2016
+FINISH DATE: ---------
+PURPOSE:
+  Make the styling for all pages
+*/
 
-/* divide the document into rows */
-  #wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    width: 100%; min-height:100%;
-    flex-direction: column;
+
+
+/* Don't change anything here (except if introducing mobile layout), Written by: Tony Timmy Tran */
+  html, body{
+    height: 100%;
+    margin: 0;
+    min-width: 525px; /*must change when introducing mobile layout*/
   }
-  #header, footer {background-color: rgba(29,31,33, 0.75)}
-  #main-content {flex:1;}
+  a {
+    line-height: 1.13; /* different browsers has different line-heights*/
+  }
+  a:link { color: #2C99BF; text-decoration: none;}
+  a:visited { color: #805CBA; text-decoration: none;}
+  a:hover { color: #2C99BF; text-decoration: underline;}
+  a:active { color: #805CBA; text-decoration: none;}
+  h2 {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  h4 {
+    margin: 14px 0 8px;
+  }
+  body {
+    background-image: url(../images/top-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    color: white;
+  }
 
-/* bli medlem button upper right corner */
+  /* divide the document into rows */
+    #wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      width: 100%; min-height:100%;
+      flex-direction: column;
+    }
+    #header, footer {background-color: rgba(29,31,33, 0.75)}
+    #main-content {flex:1;}
+
+/* bli medlem button upper right corner , Written by: Tony Timmy Tran */
   #bliMedlem {
     position: absolute;
     width: 200px; height: 200px;
@@ -63,14 +82,16 @@ body {
     font-size: 18px;
   }
   #bliMedlem > div:hover {
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
     background-color: #FF621A;
   }
 
-  #header-container {
-    height:200px;
-  }
+#header-container {
+  height:200px;
+}
 
-/* site-logo */
+/* site-logo, Written by: Tony Timmy Tran */
   #logo {
     height: 100%;
   }
@@ -94,11 +115,7 @@ body {
     }
   }
 
-
-
-
-
-/* navigation bar */
+/* navigation bar, Written by: Henrik Ove Karlsen Dahle and Tony Timmy Tran */
   #navbar-container {
     margin: auto;
     margin-top: 30px;
@@ -124,72 +141,74 @@ body {
     margin: 0;
     padding: 16px;
   }
-	#dropdownbar  {
-		color: white;
-		display: block;
-		text-decoration: none;
-		text-align: center;
-		margin: 0;
-		padding: 16px;
-		z-index: 666;
-		}
-	#dropdownbar-content {
-		width: 100px;
-		height: auto;
-		display: none; 
-		margin: auto !important;
-		overflow: visible !important;
-		padding: 0;
-		position: relative;
-		right: 10px;	
-		}
-	#dropdownbar-content ul li {
-		border: none;		
-		background: linear-gradient(#f88327, #f43127);
-		position: relative;
-		right: 30px;
-		bottom: 10px;
-		text-align: left !important;
-		width: 120px;
-		}
-	#dropdownbar-content ul li a {
-		text-align: left;
-		}
-	#dropdownbar-content ul li:hover {
-		background: rgba(29,31,33, 0.75);
-		}
-	#dropdownbar:hover #dropdownbar-content {
-		display: block;
-		}
-	#dropdownbar:hover {
-		position:relative;
-		top: 135px;
-		}
-	#navbar-container ul{
-		overflow: visible;
-		}
-	div#dropdownbar:hover > li {
-		background: rgba(0, 0, 0, 0.2);
-		width: 120px;
-		height: 50px;
-		margin: 0;
-		position: relative;
-		bottom: 10px;
-		right: 25px;
-		}
-	#dropdownbar:hover #knot {
-		position: relative;
-		top: 15px;
-		right: 7px;
-		}
-/* container */
 
+  #dropdownbar  {
+    color: white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin: 0;
+    padding: 16px;
+    z-index: 666;
+  }
+  #dropdownbar-content {
+    width: 100px;
+    height: auto;
+    display: none; 
+    margin: auto !important;
+    overflow: visible !important;
+    padding: 0;
+    position: relative;
+    right: 10px;  
+  }
+  #dropdownbar-content ul li {
+    border: none;   
+    background: linear-gradient(#f88327, #f43127);
+    position: relative;
+    right: 30px;
+    bottom: 10px;
+    text-align: left !important;
+    width: 120px;
+  }
+  #dropdownbar-content ul li a {
+    text-align: left;
+  }
+  #dropdownbar-content ul li:hover {
+    background: rgba(29,31,33, 0.75);
+  }
+  #dropdownbar:hover #dropdownbar-content {
+    display: block;
+  }
+  #dropdownbar:hover {
+    position:relative;
+    top: 135px;
+  }
+  #navbar-container ul{
+    overflow: visible;
+  }
+  div#dropdownbar:hover > li {
+    background: rgba(0, 0, 0, 0.2);
+    width: 120px;
+    height: 50px;
+    margin: 0;
+    position: relative;
+    bottom: 10px;
+    right: 25px;
+  }
+  #dropdownbar:hover #knot {
+    position: relative;
+    top: 15px;
+    right: 7px;
+  }
+
+
+/* container */
 #main-content-container {
   box-sizing: border-box;
   margin:auto;
   margin-bottom: 25px;
   padding: 15px 15px 30px 15px;
-  background-color: rgba(29,31,33, 0.75)
+  background-color: rgba(29,31,33, 0.75);
 }
 
 /* newsfeed-slideshow */
@@ -203,63 +222,131 @@ body {
     border: 1px solid black;
   }
 
-  #newsfeed-slideshow > div >.slideshow{
+  #newsfeed-slideshow > div > .slideshow{
     float: left;
-    overflow: hidden;
     width: 65%; height: 100%;
   }
 
-  #newsfeed-slideshow > div >.description{
+  #newsfeed-slideshow > div > .description{
     position: relative;
     float: left;
-    box-sizing: border-box;
     overflow: hidden;
     width: 35%; height: 100%;
+  }
+   #newsfeed-slideshow > div > .description .desc{
+    box-sizing: border-box;
     padding: 16px;
   }
-  #newsfeed-slideshow > div >.description:after{
-    position: absolute;
-    bottom: 0; 
-    left:0; 
-    height: 90px;
-    width: 100%;
-    content: "";
-    background: -webkit-linear-gradient(to top, rgba(29,31,33, 1) 10%,rgba(29,31,33, 0) 90%);
-    background: linear-gradient(to top, rgba(29,31,33, 1) 10%, rgba(29,31,33, 0) 90%);
-    pointer-events: none; /* so the text is still selectable */
+  #newsfeed-slideshow .article {
+    max-height:calc(100% - 40px);
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  #newsfeed-slideshow .article title {
+    display: block;
+    font-size: 20px;    
+    margin-top: 20px;
   }
 
-.big-section {
 
-}
-
-.small-section {
-
-}
-
-/* nye-artikler */
-#nye-artikler {
-  margin-top: 20px;
-  width: calc(100% - 300px); height:300px;
-  background-color: #1d1f21;
-  box-sizing: border-box;
-  border: 1px solid black;
-  border-top: 0px;
-}
-
-#nye-artikler > .sectionbar > div {
-  margin-left: 16px;
+/* sections */
+  .columns {
+    display: inline-block;
+    width:100%;
+  }
+  .columns > * {
+    display:inline-block;
+    float:left;
+  }
+  .columns > .c1{
+    width: calc(65% - 10px);
+    padding-right: 10px;
+    background: blaue;
+  }
+  .columns > .c2{
+    width: calc(35% - 10px);
+    padding-left: 10px;
+    background: raed;
+  }
+  @media only screen and (max-width: 750px) {
+    .columns > .c1, .columns > .c2{
+      width: 100%;
+      padding:0;
+    }
+  }
+  .big-section {
+    margin-top: 20px;
+    width: 100%; height: 440px;
+    background-color: #1d1f21;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-top: 0px;
+  }
   
-}
+  .big-section > .sectionbar > div {
+    margin-left: 16px;
+  }
+  .big-section > .content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background:white;
+  }
+  .big-section > .content ul li {
+    cursor: pointer;
+    width:100%; height:70px;
+    overflow: hidden;
+    background-color: #1d1f21;
+    border-bottom: 1px solid black;
+  }
+  .big-section > .content ul li:hover{
+    background-color: #292B2D; /*rgb(41,43,45)*/
+  }
+  .big-section > .content .image {
+    float: left;
+    display: inline-block;
+    width: 62px; height: 62px;
+    margin: 4px;
+    background: #fff;
+  }
+  .big-section > .content .desc {
+    height:70px;
+    margin-left:76px;
+    overflow: hidden;
+  }
+  .big-section > .content .desc p {
+    margin: 0 24px 0 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .big-section > .read-more {
+    margin: auto;
+    margin-top: 8px;
+    text-align: center;
+  }
+  .big-section > .read-more a:visited {
+    color: #2C99BF; text-decoration: none;
+  }
 
-#nye-artikler > .content {
-}
 
+  .small-section {
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 320px;
+    background-color: #1d1f21;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-top: 0px;
+  }
 
+  .small-section > .sectionbar > div {
+    margin-left: 16px;
+  }
 
-
-
-/* footer */
+/* footer, Written by: Tony Timmy Tran */
   footer {
     padding-bottom: 10px;
   }
@@ -307,9 +394,7 @@ body {
   margin:auto;
 }
 
-
-
-/* orange section bar */
+/* orange section bar, Written by: Tony Timmy Tran */
   .sectionbar {
     box-sizing:border-box;
     position: relative;
@@ -339,36 +424,161 @@ body {
   .sectionbar > * {
     height:50px;
   }
-
-
-/* slideshow */
+/* slideshow, Written by: Tony Timmy Tran */
   .slideshow {
+    position:relative;
+    width:100%; height:100%;
     overflow: hidden;
   }
-  .slideshow > div {
+  .slideshow > .image {
+    position: absolute;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    left:0%;
+  }
+  .slideshow > .image.img0 {  /*move img0 to the left side out of the view*/
+    margin-left: -100%;
+  }
+  .slideshow > .image.img1 {
+    margin-left: 0%;
+  }
+  .slideshow > .image.img2 { /*move img2 to the right side out of the view*/
+    margin-left: 100%;
+  }
+  .slideshow > .img-move-left { /*this is intended to be added and removed by javascript*/
+    transition: 0.5s;
+    left: 100%;
+  }
+  .slideshow > .img-move-right { /*this is intended to be added and removed by javascript*/
+    transition: 0.5s;
+    left: -100%;
+  }
+  .slideshow > .image > div {
     position: relative;
     right: 50%;
-    height: 100%;
-    width:100%;
+    width: 100%; height: 100%;
     text-align: center;
   }
-
-  .slideshow > div > img {
-    display:inline-block;
-    height:100%;
-    margin-right:-100%;
+  .slideshow > .image > div > img {
+    display: inline-block;
+    height: 100%;
+    margin-right: -100%;
+  }
+  .slideshow > .buttons {
+    pointer-events: none; /*makes it possible for the user to do "image-events" such as "open image in new tab", "search google for this image"...*/
+    position: absolute;
+    width: 100%; height: 100%;
+  }
+  .slideshow > .buttons > .arrows {
+    position: absolute;
+    width: 100%; height: 100%;
+  }
+  .slideshow > .buttons > .arrows > *{
+    cursor: pointer;
+    pointer-events: auto;
+    border-radius: 4px;
+    background-color: rgba(29,31,33, 0.4);
+  }
+  .slideshow > .buttons > .arrows > .next {
+    margin-right: 20px;
+    margin-left: auto;
+  }
+  .slideshow > .buttons > .arrows > .prev {
+    margin-left: 20px; 
+  }
+  .slideshow > .buttons > .arrows > *:hover {
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    background-color: rgba(29,31,33, 0.8);
+  }
+  .slideshow > .buttons > .arrows > * > img{
+    display: block;
+    width: 40px;
+  }
+  .slideshow > .buttons > .dots {
+    text-align: center;
+    position: absolute;
+    width: 100%; height:40px;
+    bottom:0px;
+  }
+  .slideshow > .buttons > .dots > div {
+    pointer-events: auto;
+    cursor: default;
+    width:150px; height: 100%;
+    padding-top:10px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgba(29,31,33, 0.4);
+    -webkit-transition: 0.6s ease;
+    transition: 0.6s ease;
+    /* this prevents the user to accidentially highlighting the elements */
+    -webkit-user-select: none; /* webkit (safari, chrome) browsers */
+    -moz-user-select: none; /* mozilla browsers */
+    -khtml-user-select: none; /* webkit (konqueror) browsers */
+    -ms-user-select: none; /* IE10+ */
   }
 
-/*wrappers*/
-  .wrapper-fixed-ratio {
-    position: relative;
+
+  .slideshow > .buttons > .dots > div:hover {
+    background-color: rgba(29,31,33, 0.8);
+  }
+  .slideshow > .buttons > .dots > div > .dot {
+    display: inline-block;
+    cursor: pointer;
+    width: 11px; height: 11px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.8);
+  }
+  .slideshow > .buttons > .dots .dot:hover {
+    background-color: #FF621A;
+  }
+  .slideshow > .buttons > .dots .dot.selected {
+    cursor: default;
+    background-color: #FF621A;
+  }
+
+  .slideshow + .description > .desc {
+    position: absolute;
+    width: 100%; height: 100%;
     overflow: hidden;
+    left:0%;
+  }
+  .slideshow + .description > .desc div {
+    width: 100%; height: 100%;
+  }
+  .slideshow + .description > .desc0 {
+    margin-left: -100%;
+  }
+  .slideshow + .description > .desc1 {
+    margin-left: 0%;
+  }
+  .slideshow + .description > .desc2 {
+    margin-left: 100%;
+  }
+  .slideshow + .description > .desc-move-left { /*this is intended to be added and removed by javascript*/
+    transition: 0.5s;
+    left: 100%;
+  }
+  .slideshow + .description > .desc-move-right { /*this is intended to be added and removed by javascript*/
+    transition: 0.5s;
+    left: -100%;
+  }
+/* wrappers, Written by: Tony Timmy Tran */
+  .wrapper-fixed-ratio { 
+    /* How to use this wrapper:
+    use padding-bottom as height for the element.
+    create a div inside this wrapper element
+    and then put whatever you like inside that div*/
+    position: relative;
+    width: 100%; padding-bottom: 60%; /*the default values, expected to be changed*/
   }
   .wrapper-fixed-ratio > div{
     position: absolute;
     width: 100%; height: 100%;
   }
-
   .wrapper-valign-center {
     display: flex;
     align-items: center;
@@ -387,7 +597,6 @@ ul#faq > li > ul > li {
 }
 
 /* form bli medlem */
-
 #blimedlemForm input {
   width: 25%;
   padding: 2px 2px;
@@ -407,89 +616,90 @@ ul#faq > li > ul > li {
   color: white;
 }
 
+
 /* POPUP STYLING */
 
-/* Styling of the modal background */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 25%;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.4);
-}
+  /* Styling of the modal background */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 25%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
 
-/* Styling of the modal  box itself */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 30%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-}
+  /* Styling of the modal  box itself */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  }
 
-/* Styling of the header of the modal */
-.modal-header {
-  padding: 0.1em 1em;
-  background-color: #e64f17;
-  color: white;
-  font-weight: bold;
-}
+  /* Styling of the header of the modal */
+  .modal-header {
+    padding: 0.1em 1em;
+    background-color: #e64f17;
+    color: white;
+    font-weight: bold;
+  }
 
-.modal-header h3 {
-  margin: 0.5em 0;
-}
+  .modal-header h3 {
+    margin: 0.5em 0;
+  }
 
-/* Styling of the body of the modal */
-.modal-body {
-  padding: 0 1em;
-  color: black;
-}
+  /* Styling of the body of the modal */
+  .modal-body {
+    padding: 0 1em;
+    color: black;
+  }
 
-/* Styling of the footer of the modal */
-.modal-footer {
-  padding: 0.5em 0.5em;
-  background-color: #e64f17;
-  color: white;
-  text-align: right;
-}
+  /* Styling of the footer of the modal */
+  .modal-footer {
+    padding: 0.5em 0.5em;
+    background-color: #e64f17;
+    color: white;
+    text-align: right;
+  }
 
-/* Styling of the yes/no buttons of the modal */
-.modal-button {
-  background-color: #fefefe;
-  border: none;
-  color: black;
-  padding: 0.25em 1em;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1em;
-  margin: 0.25em 0.25em;
-  cursor: pointer;
-  border-radius: 0.25em;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
+  /* Styling of the yes/no buttons of the modal */
+  .modal-button {
+    background-color: #fefefe;
+    border: none;
+    color: black;
+    padding: 0.25em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    margin: 0.25em 0.25em;
+    cursor: pointer;
+    border-radius: 0.25em;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
 
-.modal-button:hover {
-  background-color: #b42b00;
-  color: white;
-}
+  .modal-button:hover {
+    background-color: #b42b00;
+    color: white;
+  }
 
-/* Styling of the close button on the modal */
-.close-button {
-  color: white;
-  float: right;
-  font-size: 1.5em;
-}
+  /* Styling of the close button on the modal */
+  .close-button {
+    color: white;
+    float: right;
+    font-size: 1.5em;
+  }
 
-.close-button:hover, .close-button:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+  .close-button:hover, .close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
