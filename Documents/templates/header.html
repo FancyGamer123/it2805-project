@@ -17,13 +17,23 @@ PURPOSE: This is the header template which includes the the header and navbar wh
 	</div>
 </div>
 
+
 <div id="navbar">
 	<div id="navbar-container" class="sectionbar container">
 		<ul class="wrapper-valign-center">
 			<li><a href="index.html">Hjem</a></li>
 			<li><a href="artikler.html">Artikler</a></li>
 			<li><a href="omtaler.html">Omtaler</a></li>
-			<li><a href="info.html">Om Oss</a></li>
+			<li class="dropdown">
+    		<a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdownMenu()">Om oss</a>
+    		<div class="dropdown-content" id="myDropdown">
+					<a href="info.html">Info</a>
+					<a href="galleri.html">Galleri</a>
+					<a href="kontaktoss.html">Kontakt oss</a>
+					<a href="faq.html">FAQ</a>
+					<a href="blimedlem.html">Bli Medlem</a>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>
