@@ -1,29 +1,44 @@
 <!--
 FILENAME: header.html
-WRITTEN BY: Tony Timmy Tran
+WRITTEN BY: Sandor Zeestraten and Tony Timmy Tran 
 WHEN: 2016-11-01
 PURPOSE: This is the header template which includes the the header and navbar which will be included on every page.
 -->
 
 <div id="header">
 	<div id="bliMedlem">
-		<div onclick="convertToLeet()">Bli Medlem!</div>
+		<!-- Leetspeak converter button -->
+		<div onclick="convertToLeet()">Bli medlem!</div>
 	</div>
 	<div id="header-container" class="container">
 		<div id="logo" class="wrapper-valign-center">
-			<img src="images/logo.png" onclick="location.href='index.html'">
+			<img src="images/logo.png" alt="FSG logo" onclick="location.href='index.html'">
 			<h1>Det Frie Student Gamer Laget</h1>
 		</div>
 	</div>
 </div>
 
+<!--
+PURPOSE: The navbar has a clickable dropdown menu to support touch enabled devices
+CREDITS: The code is a lightly modified version from the Dropdown Menu in Navbar example from W3Schools.
+URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
+-->
 <div id="navbar">
 	<div id="navbar-container" class="sectionbar container">
 		<ul class="wrapper-valign-center">
 			<li><a href="index.html">Hjem</a></li>
 			<li><a href="artikler.html">Artikler</a></li>
 			<li><a href="omtaler.html">Omtaler</a></li>
-			<li><a href="info.html">Om Oss</a></li>
+			<li class="dropdown">
+    		<a href="javascript:void(0)" class="dropbtn" onclick="toggleDropdownMenu()">Om oss</a>
+    		<div class="dropdown-content" id="myDropdown">
+					<a href="info.html">Info</a>
+					<a href="galleri.html">Galleri</a>
+					<a href="kontaktoss.html">Kontakt oss</a>
+					<a href="faq.html">FAQ</a>
+					<a href="blimedlem.html">Bli Medlem</a>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>

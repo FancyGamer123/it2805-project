@@ -115,7 +115,12 @@ PURPOSE:
     }
   }
 
-/* navigation bar, Written by: Henrik Ove Karlsen Dahle and Tony Timmy Tran */
+/* navigation bar, Written by: Sandor Zeestraten and Tony Timmy Tran */
+  /*
+  PURPOSE: Add a clickable dropdown menu with CSS and JS.
+  CREDITS: The code is a lightly modified version from the Dropdown Menu in Navbar example from W3Schools.
+  URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
+  */
   #navbar-container {
     margin: auto;
     margin-top: 30px;
@@ -130,18 +135,40 @@ PURPOSE:
   #navbar-container ul li {
     float: left;
   }
-  #navbar-container ul li:hover {
-    background-color: rgba(0,0,0,0.2);
-  }
-  #navbar-container ul li a {
+  #navbar-container ul li a, .dropbtn {
+    display: inline-block;
     color: white;
-    display: block;
-    text-decoration: none;
     text-align: center;
-    margin: 0;
-    padding: 16px;
+    padding: 16px 16px;
+    text-decoration: none;
   }
-
+  #navbar-container li a:hover, .dropdown:hover .dropbtn {
+    background: rgba(29,31,33, 0.25);
+  }
+  #navbar-container li.dropdown {
+    display: inline-block;
+  }
+  #navbar-container .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  #navbar-container .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+  }
+  #navbar-container .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  #navbar-container .show {
+    display:block;
+  }
+  /*
   #dropdownbar  {
     color: white;
     display: block;
@@ -199,7 +226,7 @@ PURPOSE:
     position: relative;
     top: 15px;
     right: 7px;
-  }
+  }*/
 
 
 /* main-content-container, Written by: Tony Timmy Tran */
@@ -328,7 +355,6 @@ PURPOSE:
   .big-section > .read-more a:visited {
     color: #2C99BF; text-decoration: none;
   }
-
 
   .small-section {
     display: inline-block;
