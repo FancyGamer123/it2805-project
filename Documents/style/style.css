@@ -28,7 +28,7 @@ PURPOSE: Make the styling for all pages
     margin: 14px 0 8px;
   }
   body {
-    background-image: url(../images/top-bg.png);
+    background-image: url(../images/background.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black;
