@@ -276,7 +276,7 @@ PURPOSE:
   }
 
 
-/* sections, Written by: Tony Timmy Tran */
+/* columns, Written by: Tony Timmy Tran */
   .columns {
     display: inline-block;
     width:100%;
@@ -301,15 +301,17 @@ PURPOSE:
       padding:0;
     }
   }
+
+/* sections, Written by: Tony Timmy Tran */
+  /* big sections will have space for exactly 5 list items */
   .big-section {
     margin-top: 20px;
-    width: 100%; height: 440px;
+    width: 100%; min-height: 440px; /* min height to preserve space for at least 5 list items */
     background-color: #1d1f21;
     box-sizing: border-box;
     border: 1px solid black;
     border-top: 0px;
   }
-  
   .big-section > .sectionbar > div {
     margin-left: 16px;
   }
@@ -333,8 +335,13 @@ PURPOSE:
     float: left;
     display: inline-block;
     width: 62px; height: 62px;
-    margin: 4px;
+    overflow: hidden;
+    border:1px solid black;
+    margin: 3px;
     background: #fff;
+  }
+  .big-section > .content .image > img {
+      height:100%;
   }
   .big-section > .content .desc {
     height:70px;
@@ -350,6 +357,7 @@ PURPOSE:
   .big-section > .read-more {
     margin: auto;
     margin-top: 8px;
+    margin-bottom: 8px;
     text-align: center;
   }
   .big-section > .read-more a:visited {
@@ -450,6 +458,7 @@ PURPOSE:
   .sectionbar > * {
     height:50px;
   }
+
 /* slideshow, Written by: Tony Timmy Tran */
   .slideshow {
     position:relative;
@@ -592,6 +601,7 @@ PURPOSE:
     transition: 0.5s;
     left: -100%;
   }
+
 /* wrappers, Written by: Tony Timmy Tran */
   .wrapper-fixed-ratio { 
     /* How to use this wrapper:
