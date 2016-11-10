@@ -133,14 +133,14 @@ PURPOSE: Make the styling for all pages
   #navbar-container ul li {
     float: left;
   }
-  #navbar-container ul li a, .dropbtn {
+  #navbar-container ul li a, #dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 16px 16px;
     text-decoration: none;
   }
-  #navbar-container li a:hover, .dropdown:hover .dropbtn {
+  #navbar-container li a:hover, .dropdown:hover #dropbtn {
     background: rgba(29,31,33, 0.25);
   }
   #navbar-container li.dropdown {

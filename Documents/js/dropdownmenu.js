@@ -6,24 +6,25 @@ CREDITS: The code is a lightly modified version from the Dropdown Menu in Navbar
 URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
 */
 
-// Toggle between hiding and showing the dropdown content when clicked
+// Setup vars
+var myDropdown = document.getElementById("myDropdown");
+var dropbtn = document.getElementById("dropbtn");
+
+// Function for toggling between hiding and showing the dropdown
 function toggleDropdownMenu() {
-    document.getElementById("myDropdown").classList.toggle("show");
+  myDropdown.classList.toggle("show");
 }
 
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  // Check if target is not dropdown button
-  if (!e.target.matches('.dropbtn')) {
-    // Go through all dropdown classes
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    for (var d = 0; d < dropdowns.length; d++) {
-      // Loop through all open dropdown menus
-      var openDropdown = dropdowns[d];
-      // If any dropdowns are open, remove them
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
+// Add eventlistener for clicking outside the dropdown when displayed
+document.addEventListener("click", function(e) {
+  if (myDropdown.classList.contains("show") && !myDropdown.contains(e.target)) {
+    toggleDropdownMenu();
   }
-}
+});
+
+// Add eventlistener for clicking the dropdown button
+dropbtn.addEventListener("click", function(e) {
+  toggleDropdownMenu();
+  // Stop event from propagating to the other eventlistener
+  e.stopPropagation();
+});

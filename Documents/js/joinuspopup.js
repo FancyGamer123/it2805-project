@@ -36,19 +36,21 @@ function joinUsPopup() {
         localStorage.setItem('popupVisitCounter', 'False');
     }
 };
-window.addEventListener("load", joinUsPopup, false);
 
-// Go to the join us page
+// Function for going to the  join us page
 function goToBliMedlem() {
-    window.location.href = '../blimedlem.html';
+  window.location.href = '../blimedlem.html';
 }
 
-// Hide popup
+// Function for hiding the popup
 function hidePopup() {
-    modal.style.display = 'none';
+  modal.style.display = 'none';
 }
 
-// Interacting with the popup
+// Add click listeners to the popup buttons
 popup_yes.addEventListener("click", goToBliMedlem);
 popup_no.addEventListener("click", hidePopup);
 popup_close.addEventListener("click", hidePopup);
+
+// Add the joinUsPopup function to window.onload eventlistener
+window.addEventListener("load", joinUsPopup, false);
