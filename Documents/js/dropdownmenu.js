@@ -1,6 +1,7 @@
 /*
 FILENAME: dropdownmenu.js
 PURPOSE: Add a clickable dropdown menu with CSS and JS.
+WHEN: 2016-11-05
 CREDITS: The code is a lightly modified version from the Dropdown Menu in Navbar example from W3Schools.
 URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click
 */
