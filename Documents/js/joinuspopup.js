@@ -12,11 +12,12 @@ URL: http://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal2
 var modal = document.getElementById('modal-popup');
 var popup_no = document.getElementById('popup_no');
 var popup_yes = document.getElementById('popup_yes');
+var popup_close = document.getElementById('popup_close');
 var popupVisitTarget = '3';
 var popupVisitCounter = localStorage.getItem('popupVisitCounter');
 
 // Check if we need to display popup
-window.onload = function() {
+function joinUsPopup() {
     // Check if it's a new user
     if (popupVisitCounter === null) {
         // Set the initial visit counter
@@ -35,18 +36,19 @@ window.onload = function() {
         localStorage.setItem('popupVisitCounter', 'False');
     }
 };
+window.addEventListener("load", joinUsPopup, false);
+
+// Go to the join us page
+function goToBliMedlem() {
+    window.location.href = '../blimedlem.html';
+}
+
+// Hide popup
+function hidePopup() {
+    modal.style.display = 'none';
+}
 
 // Interacting with the popup
-window.onclick = function(event) {
-    // Check if user clicks outside popup or selects no
-    if (event.target == modal || event.target == popup_no) {
-        // Hide popup
-        modal.style.display = 'none';
-    }
-
-    // Check if user clicks join me in the popup
-    if (event.target == popup_yes) {
-        // Redirect to the join us page
-        window.location.href = '../blimedlem.html';
-    }
-};
+popup_yes.addEventListener("click", goToBliMedlem);
+popup_no.addEventListener("click", hidePopup);
+popup_close.addEventListener("click", hidePopup);

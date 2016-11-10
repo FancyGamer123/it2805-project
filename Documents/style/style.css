@@ -658,13 +658,13 @@ ul#faq > li > ul > li {
   }
 
   /* Styling of the close button on the modal */
-  .close-button {
+  #popup_close {
     color: white;
     float: right;
     font-size: 1.5em;
   }
 
-  .close-button:hover, .close-button:focus {
+  #popup_close:hover, #popup_close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
