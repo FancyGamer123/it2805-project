@@ -1,8 +1,12 @@
-/* 
-FILE NAME: js/index.js 
+/*
+FILE NAME: index.js
 WRITTEN BY: Tony Timmy Tran
+<<<<<<< HEAD
 START DATE: 05.11.2016
 FINISH DATE: 10.11.2016
+=======
+WHEN: 2016-11-05
+>>>>>>> master
 PURPOSE:
 	Make list-items for the sections ("nye-artikler" and "nye-omtaler")
 
