@@ -5,6 +5,9 @@ WHEN: 2016-10-25
 PURPOSE: Change the text on the webpage to leetspeak.
 */
 
+// Get the element were attaching the eventlistener to
+var bliMedlem = document.getElementById("bliMedlem");
+
 // Leetspeak dictionary
 var alphabets = {
     a: "4",
@@ -25,7 +28,7 @@ var tags = [
     "h2"
 ];
 
-// Variabel that is set when the site is converted
+// Variable that is set when the site is converted
 var haveConvertet = false;
 
 // Function that converts the page to leetspeak. If already converted, reload the page.
@@ -64,3 +67,6 @@ function convertToLeet() {
         }
     }
 }
+
+// Add click listener to the button
+bliMedlem.addEventListener("click", leetspeakConverter);
