@@ -93,6 +93,7 @@
                 <h3>Tilleggsfil scripts.html</h3>
                 <p>Vi la til en HTML template som laster inn alle JavaScript-skriptene som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
+
                 <!-- ENDRINGER PÅ STYLE -->
                 <h3>TODO: Endringer på styling</h3>
                 <ul>
@@ -121,7 +122,11 @@
                 <p>
                     Vi har brukt en kombinasjon av Apache SSI og JavaScript for å oppfylle modulæritets-kravet.
                     For Apache så brukes header.html, footer.html og joinuspopup.html på alle sidene.
-                    For JavaScript så brukes det for laste inn bilder i slideshow og artikler.
+                    Webserveren siden kjører på er derfor avhengig av å kjøre Apache og hvor SSI modulen er slått på.
+                    Instillingene settes i .htaccess filen
+                </p>
+                <p>
+                    JavaScript så brukes det for laste inn bilder i slideshow og artikler.
                 </p>
 
                 <h3>Arbeidsoppgaver</h3>
@@ -233,6 +238,12 @@
                         <td><b>JS for å lage et slideshow</b></td>
                         <td><b>Timmy</b></td>
                         <td><b>03.11.16</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>.htaccess</b></td>
+                        <td><b>Apache konfigurasjonsfil for enable SSI</b></td>
+                        <td><b>Sandor</b></td>
+                        <td><b>25.10.16</b></td>
                     </tr>
                     <tr>
                         <td><b>Siste kontroll</b></td>
@@ -421,6 +432,11 @@
                         <td>slideshow.js</td>
                         <td>JS for å lage dynamiske slideshows</td>
                         <td>Timmy</td>
+                    </tr>
+                    <tr>
+                        <td>.htaccess</td>
+                        <td>Apache konfigurasjonsfil for enable SSI</td>
+                        <td>Sandor</td>
                     </tr>
                     <tr>
                         <td>leetspeak.js</td>
