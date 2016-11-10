@@ -669,3 +669,50 @@ ul#faq > li > ul > li {
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* Article section */
+  .inlineImg {
+  float: left;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  margin: 15px 15px;
+  }
+  .articleCont {
+  margin: -1px;
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background-color: #1d1f21;
+  border: 1px solid black;
+  }
+  .articleText {
+  position: relative;
+  top: 15px;
+  max-height: 100px;
+  overflow: hidden;
+  }
+  .articleText > p {
+  margin: 0;
+  }
+  #navbar-bottom {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  }
+  #navbar-bottom a {
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+  }
+  #currentPage {
+  font-size: 2em;
+  }
+  #navbar-bottom a:visited {
+  color: lightgray;
+  }
+  .chevron {
+  font-size: 3em;
+  }
+  /* End of article section */
