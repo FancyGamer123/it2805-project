@@ -1,8 +1,7 @@
-/* 
-FILE NAME: js/index.js 
+/*
+FILE NAME: index.js
 WRITTEN BY: Tony Timmy Tran
-START DATE: 05.11.2016
-FINISH DATE: ---------
+WHEN: 2016-11-05
 PURPOSE:
 	Make the "list-items" for the new-articles and new-reviews
 */
