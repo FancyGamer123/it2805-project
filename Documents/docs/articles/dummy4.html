@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<!-- META -->
+		<!--#include virtual="/tonytt/Documents/templates/meta.html" -->
 		<title>id Software's History Parallels the Seven Ages of Man and the History of PC Gaming</title>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<style>
 		h3 {
 		font-weight: normal;
@@ -45,27 +45,9 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="header">
-				<div id="bliMedlem" >
-					<div onclick="bliMedlem()">Bli Medlem!</div>
-				</div>
-				<div id="header-container" class="container">
-					<div id="logo" class="wrapper-valign-center">
-						<img src="images/logo-large2.png" onclick="location.href='index.html'">
-						<h1>Det Frie Student Gamer Laget</h1>
-					</div>
-				</div>
-			</div>
-			<div id="navbar">
-				<div id="navbar-container" class="sectionbar container">
-					<ul class="wrapper-valign-center">
-					  <li><a href="index.html">Hjem</a></li>
-					  <li><a href="artikler.html">Artikler</a></li>
-					  <li><a href="omtaler.html">Omtaler</a></li>
-					  <li><a href="info.html">Om Oss</a></li>
-					</ul>
-				</div>
-			</div>
+			<!-- HEADER -->
+			<!--#include virtual="/tonytt/Documents/templates/header.html" -->
+
 			<div id="main-content">
 				<div id="main-content-container" class="container">
 					<div class="header">
@@ -85,44 +67,19 @@
 							<p>And then all of a sudden Quake 2 takes all that frothing angst and resentment and cuts it off like a head of foam from an overflowing pint. The fantastical, otherworldly elements vanish, to be replaced by a brick and mortar science fiction scenario about humanoid cyborg aliens getting all up in our brown business for us to dutifully shoot back down. I can forgive a game for a lot of things, but never being boring, and Quake 2 is so dull and repetitive that it even makes Quake's brown castle showcase sparkle in comparison. It's cleaner and more washed out with none of the spike or edge. This age of man is early adulthood, the inevitable tedious entry-level job straight out of school where we first sacrifice a piece of our soul for the sake of security and stability and kick off years of self-loathing.</p>
 							<p>This stage inevitably leads to middle age, which inevitably leads to the midlife crisis, neatly embodied by Rage. All of a sudden the fear of death brings denial of one's past-it-ness and the need to try to fit in with the young people again. What do the young people like? Sandboxes! Mad Max-y, Borderlands-y post-apocalypse. And the cliche of the midlife crisis is buying a fast car. What does Rage introduce? Player-owned vehicles. Quod erat demonstrandum.</p>
 							<p>Now, I know what you're going to say. Yahtzee, surely you don't think the new Doom, Doom 2016, Doom 4, Deum, DOOOOM or whatever name ends up sticking, represents old age? That fast-paced, exciting young buck that re-energized the year's triple-A releases? Yes, and here's why. While a creaky old man couldn't move like DOOOOM does without reducing his hipbone to gravel, it's not just reduced physicality that characterises the old. If you've ever spent the holidays with elderly relatives and had to listen to their opinions on other races and alternative sexualities, then you'll agree that being old is all about no longer having to give a shit. And DOOOOM gives so little shit it would be swiftly fired from the fertilizer shop.</p>
-							<a href="artikler.html">Back to articles</a>							
+							<a href="../artikler1.html">Back to articles</a>							
 						</div>
 				</div>
 			</div>
-			<footer>
-				<div id="footer-container" class="container">
-					<div class="footer-section">
-						<h3>Mer Info:</h3>
-						<ul>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<h3>Følg oss:</h3>
-						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Snapchat</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">						<h3>Kontakt oss:</h3>
-						<ul>
-							<li><a>Tlf: +47 99999999</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Slack</a></li>
-							<li><a>Adresse</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<div class="footer-map">
-							<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-							<div style='margin-top:20px;margin-bottom:20px;overflow:hidden;height:140px;width:100%;'><div id='gmap_canvas' style='height:140px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="https://privacypolicygenerator.info">privacy policy example</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(63.262910535509185,10.178447449511733),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(63.262910535509185,10.178447449511733)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>trondheim<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-						</div>
-					</div>
-				</div>
-			</footer>
+
+			<!-- FOOTER -->
+			<!--#include virtual="/tonytt/Documents/templates/footer.html" -->
+
+			<!-- POPUP -->
+			<!--#include virtual="/tonytt/Documents/templates/joinuspopup.html" -->
+
+			<!-- SCRIPTS -->
+			<!--#include virtual="/tonytt/Documents/templates/scripts.html" -->
 		</div>
 		
 	</body>

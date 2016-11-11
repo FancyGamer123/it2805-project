@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<!-- META -->
+		<!--#include virtual="/tonytt/Documents/templates/meta.html" -->
 		<title>This is How You Fix RPG Sidequests</title>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<style>
 		h3 {
 		font-weight: normal;
@@ -45,27 +45,9 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="header">
-				<div id="bliMedlem" >
-					<div onclick="bliMedlem()">Bli Medlem!</div>
-				</div>
-				<div id="header-container" class="container">
-					<div id="logo" class="wrapper-valign-center">
-						<img src="images/logo-large2.png" onclick="location.href='index.html'">
-						<h1>Det Frie Student Gamer Laget</h1>
-					</div>
-				</div>
-			</div>
-			<div id="navbar">
-				<div id="navbar-container" class="sectionbar container">
-					<ul class="wrapper-valign-center">
-					  <li><a href="index.html">Hjem</a></li>
-					  <li><a href="artikler.html">Artikler</a></li>
-					  <li><a href="omtaler.html">Omtaler</a></li>
-					  <li><a href="info.html">Om Oss</a></li>
-					</ul>
-				</div>
-			</div>
+			<!-- HEADER -->
+			<!--#include virtual="/tonytt/Documents/templates/header.html" -->
+
 			<div id="main-content">
 				<div id="main-content-container" class="container">
 					<div class="header">
@@ -86,44 +68,19 @@
 							<p>But there is something heroic about sending a trusted friend - not trusted enough that I want them in my adventuring party but enough that I'll let them hang around our castle without worrying that they'll nick the silverware - to complete these quests in my place. It shows that we didn't forget Mrs. Plopknickers even when so many other things require our attention. So you'd send your unused party member, let's say Colin the dwarf, and after a certain amount of time he comes back to report the quest completed and Mrs. Plopknickers satisfied. He would then hand over half the gold/XP reward the quest offered, as well as any special items acquired from it, such as the late Mr. Plopknickers' best farming trousers.</p>
 							<p>The more I thought about this, the more sense it made. It clears up the quest log and means that Colin the dwarf has an opportunity to level up despite never being in your party. There is one glaring problem: many sidequests have story aspects and may even require you to make a choice that will affect the reward and future lives of those involved. Maybe you could have Colin report in and request that you make a decision by telegram, but that hardly shows trust in Colin's judgement. No, I don't think it would matter so much if you left the choice in Colin's hands; after all, there should be SOME penalty for fobbing the quest off instead of doing it yourself. Maybe when Colin comes back with his after-action report and you learn how interesting the quest got you could make a mental note to give it a try in your next playthrough.</p>
 							<p>So that was it, really; just a little idea to fix a common gameplay issue in a certain kind of game that's been preying on my mind lately. Maybe you, the readers, have thoughts on how to refine the concept further? If so, please feel free to tell them to someone who gives a shit.</p>
-							<a href="artikler.html">Back to articles</a>							
+							<a href="../artikler1.html">Back to articles</a>							
 						</div>
 				</div>
 			</div>
-			<footer>
-				<div id="footer-container" class="container">
-					<div class="footer-section">
-						<h3>Mer Info:</h3>
-						<ul>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<h3>Følg oss:</h3>
-						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Snapchat</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">						<h3>Kontakt oss:</h3>
-						<ul>
-							<li><a>Tlf: +47 99999999</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Slack</a></li>
-							<li><a>Adresse</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<div class="footer-map">
-							<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-							<div style='margin-top:20px;margin-bottom:20px;overflow:hidden;height:140px;width:100%;'><div id='gmap_canvas' style='height:140px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="https://privacypolicygenerator.info">privacy policy example</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(63.262910535509185,10.178447449511733),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(63.262910535509185,10.178447449511733)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>trondheim<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-						</div>
-					</div>
-				</div>
-			</footer>
+
+			<!-- FOOTER -->
+			<!--#include virtual="/tonytt/Documents/templates/footer.html" -->
+
+			<!-- POPUP -->
+			<!--#include virtual="/tonytt/Documents/templates/joinuspopup.html" -->
+
+			<!-- SCRIPTS -->
+			<!--#include virtual="/tonytt/Documents/templates/scripts.html" -->
 		</div>
 		
 	</body>

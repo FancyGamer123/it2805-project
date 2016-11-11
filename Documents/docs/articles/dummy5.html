@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<!-- META -->
+		<!--#include virtual="/tonytt/Documents/templates/meta.html" -->
 		<title>There's More to Comedy Games than Just Comic Relief Characters</title>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<style>
 		h3 {
 		font-weight: normal;
@@ -45,27 +45,9 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<div id="header">
-				<div id="bliMedlem" >
-					<div onclick="bliMedlem()">Bli Medlem!</div>
-				</div>
-				<div id="header-container" class="container">
-					<div id="logo" class="wrapper-valign-center">
-						<img src="images/logo-large2.png" onclick="location.href='index.html'">
-						<h1>Det Frie Student Gamer Laget</h1>
-					</div>
-				</div>
-			</div>
-			<div id="navbar">
-				<div id="navbar-container" class="sectionbar container">
-					<ul class="wrapper-valign-center">
-					  <li><a href="index.html">Hjem</a></li>
-					  <li><a href="artikler.html">Artikler</a></li>
-					  <li><a href="omtaler.html">Omtaler</a></li>
-					  <li><a href="info.html">Om Oss</a></li>
-					</ul>
-				</div>
-			</div>
+			<!-- HEADER -->
+			<!--#include virtual="/tonytt/Documents/templates/header.html" -->
+
 			<div id="main-content">
 				<div id="main-content-container" class="container">
 					<div class="header">
@@ -75,7 +57,7 @@
 					</div>
 						<div class="main-container">
 							<p>So let's talk about comedy games. In my last ZP I talked about Headlander, and how it felt more like a game with too many comic relief characters than a "comedy game" per se. This is because the actual events that drive the plot are largely po-faced; it's a fairly hard sci-fi yarn about saving all the digitized humans from the evil dictator.</p>
-							<img src="images/art5.jpg" alt="article 5 pic" class="rightside">
+							<img src="images/art5.png" alt="article 5 pic" class="rightside">
 							<p>To my mind, what differentiates a full on "comedy" from something that's merely light-hearted or having a comedic tone is that you can tell that it's a comedy from just a synopsis of the events that happen in the plot. Even if they're not inherently funny there'll be some obvious absurdity or exaggeration about them. Ghostbusters is a comedy because they fight a giant marshmallow man. The exception would be if we're talking about a deliberate deadpan parody, like Airplane! and everything else Leslie Nielsen did after 1980.</p>
 							<p>To bring things back to games, Psychonauts is a comedy game. You're attempting to save the world from villainy afoot in a summer camp for psychics. That's an absurd scenario, the supernatural being accepted in a conventionally mundane and innocent setting. Sunset Overdrive is a comedy game about people being turned into mutant zombies by an energy drink; again, something absurd and monstrous comes out of something as innocent and faintly lame as a commercial beverage. It's a failed comedy game because it's not in the least bit funny, but it did at least make its intentions clear.</p>
 							<p>In contrast, something like Sacred 3 I would not classify as a comedy game, it's got a fairly straight fantasy RPG plot. It's just that someone seems to have tortuously tried to crowbar snarky humour into every single line of dialogue, whether it was needed or not, and it's absolutely excruciating. It makes me think of films that are the tragic victims of studio meddling like Suicide Squad, that end up trying to keep five different tones going because various people in charge couldn't decide in what direction the prevailing winds were blowing.</p>
@@ -87,44 +69,19 @@
 							<p>But the turrets in Portal were non-characters. That was part of the joke too, I think, its voice lines were prerecorded things put into an automated weapon by the manufacturer out of some incredibly misguided attempt to make them seem friendlier. The turrets in Headlander are I think supposed to be characters with personalities - or, one suspects, a single personality spread across the entire security system, which would be in keeping with the way digitized consciousness works in the rest of the game. In which case, if it were me, I would have given them an arc. Rather than persistently yelling SORRY from start to finish and run the non-joke into the ground, maybe at some point in the storyline the player could inadvertently do something the turret finds incredibly offensive, and its personality would shift through disbelief to righteous fury before (just before the end of the game) breaking down in tears and begging forgiveness because it let its emotions carry it away. All the while emitting the same constant stream of hostile gunfire. That'd work better as a joke 'cos it's adding a new twist to the established gag.</p>
 							<p>This is a suggestion I wouldn't have thought Double Fine needed to hear, since they did this very thing in Psychonauts. There are two cheerleader characters who are established early on as very annoyingly upbeat. That's the initial gag, but then later on you catch them attempting suicide and realise they're both horribly manically depressed. That's the admittedly kinda dark twist. Similar thing with Wheatley in Portal 2 when he very suddenly switches from moronic sidekick to moronic villain.</p>
 							<p>Even then, gags that are dependent on dialogue always have a shelf life. A hilariously pithy line of Swiftian prose will see you through a moment, but you can live off a knob gag for years. Nine years and counting, so far.</p>
-							<a href="artikler.html">Back to articles</a>						
+							<a href="../artikler2.html">Back to articles</a>						
 						</div>
 				</div>
 			</div>
-			<footer>
-				<div id="footer-container" class="container">
-					<div class="footer-section">
-						<h3>Mer Info:</h3>
-						<ul>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<h3>Følg oss:</h3>
-						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Snapchat</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">						<h3>Kontakt oss:</h3>
-						<ul>
-							<li><a>Tlf: +47 99999999</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Slack</a></li>
-							<li><a>Adresse</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<div class="footer-map">
-							<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-							<div style='margin-top:20px;margin-bottom:20px;overflow:hidden;height:140px;width:100%;'><div id='gmap_canvas' style='height:140px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="https://privacypolicygenerator.info">privacy policy example</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(63.262910535509185,10.178447449511733),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(63.262910535509185,10.178447449511733)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>trondheim<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-						</div>
-					</div>
-				</div>
-			</footer>
+
+			<!-- FOOTER -->
+			<!--#include virtual="/tonytt/Documents/templates/footer.html" -->
+
+			<!-- POPUP -->
+			<!--#include virtual="/tonytt/Documents/templates/joinuspopup.html" -->
+
+			<!-- SCRIPTS -->
+			<!--#include virtual="/tonytt/Documents/templates/scripts.html" -->
 		</div>
 		
 	</body>

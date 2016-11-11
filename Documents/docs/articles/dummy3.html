@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<!-- META -->
+		<!--#include virtual="/tonytt/Documents/templates/meta.html" -->
 		<title>Predicting What's New on the Nostalgia Horizon - The PS1 Era</title>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<style>
 		h3 {
 		font-weight: normal;
@@ -46,26 +46,9 @@
 	<body>
 		<div id="wrapper">
 			<div id="header">
-				<div id="bliMedlem" >
-					<div onclick="bliMedlem()">Bli Medlem!</div>
-				</div>
-				<div id="header-container" class="container">
-					<div id="logo" class="wrapper-valign-center">
-						<img src="images/logo-large2.png" onclick="location.href='index.html'">
-						<h1>Det Frie Student Gamer Laget</h1>
-					</div>
-				</div>
-			</div>
-			<div id="navbar">
-				<div id="navbar-container" class="sectionbar container">
-					<ul class="wrapper-valign-center">
-					  <li><a href="index.html">Hjem</a></li>
-					  <li><a href="artikler.html">Artikler</a></li>
-					  <li><a href="omtaler.html">Omtaler</a></li>
-					  <li><a href="info.html">Om Oss</a></li>
-					</ul>
-				</div>
-			</div>
+			<!-- HEADER -->
+			<!--#include virtual="/tonytt/Documents/templates/header.html" -->
+
 			<div id="main-content">
 				<div id="main-content-container" class="container">
 					<div class="header">
@@ -87,44 +70,19 @@
 							<p>So what else rose to particular prominence around the Playstation between 1996 and 2000, when the PS2 took up the reins? Well, there was also the invention of survival horror (or rather, the coining of the term 'survival horror' because the first true survival horror would have been either Alone in the Dark, Clock Tower or The Uninvited and frankly they can fight it out amongst themselves) with Resident Evil and Silent Hill. Before Resident Evil 4 shifted the focus more onto the action than the sense of vulnerability and creeping dread. And what are we seeing now? Resident Evil VII apparently going back to the vulnerability bit.</p>
 							<p>That might be a bit of a stretch, so I'm doing what I always do when I'm stuck with a weak ending to a column and throwing it out to the comments. What signs are we seeing today that might indicate nostalgia for 32 bit graphics and the PS1 era? What will be the next nostalgic trends in gaming, bearing in mind the twenty year rule? Please answer promptly before the patent office closes.
 </p>
-							<a href="artikler.html">Back to articles</a>							
+							<a href="../artikler1.html">Back to articles</a>							
 						</div>
 				</div>
 			</div>
-			<footer>
-				<div id="footer-container" class="container">
-					<div class="footer-section">
-						<h3>Mer Info:</h3>
-						<ul>
-							<li><a href="#">Terms of Service</a></li>
-							<li><a href="#">Privacy Policy</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<h3>Følg oss:</h3>
-						<ul>
-							<li><a href="#">Facebook</a></li>
-							<li><a href="#">Twitter</a></li>
-							<li><a href="#">Instagram</a></li>
-							<li><a href="#">Snapchat</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">						<h3>Kontakt oss:</h3>
-						<ul>
-							<li><a>Tlf: +47 99999999</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">Slack</a></li>
-							<li><a>Adresse</a></li>
-						</ul>
-					</div>
-					<div class="footer-section">
-						<div class="footer-map">
-							<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-							<div style='margin-top:20px;margin-bottom:20px;overflow:hidden;height:140px;width:100%;'><div id='gmap_canvas' style='height:140px;width:100%;'></div><div><small><a href="http://embedgooglemaps.com">embed google maps</a></small></div><div><small><a href="https://privacypolicygenerator.info">privacy policy example</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(63.262910535509185,10.178447449511733),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(63.262910535509185,10.178447449511733)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>trondheim<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-						</div>
-					</div>
-				</div>
-			</footer>
+
+			<!-- FOOTER -->
+			<!--#include virtual="/tonytt/Documents/templates/footer.html" -->
+
+			<!-- POPUP -->
+			<!--#include virtual="/tonytt/Documents/templates/joinuspopup.html" -->
+
+			<!-- SCRIPTS -->
+			<!--#include virtual="/tonytt/Documents/templates/scripts.html" -->
 		</div>
 		
 	</body>

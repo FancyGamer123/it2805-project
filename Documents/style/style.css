@@ -1,10 +1,8 @@
 /*
 FILE NAME: style/style.css
 WRITTEN BY: Henrik Ove Karlsen Dahle, Håvard Løkensgard, Sandor Zeestraten, Tony Timmy Tran
-START DATE: 11.10.2016
-FINISH DATE: ---------
-PURPOSE:
-  Make the styling for all pages
+WHEN: 2016-10-11
+PURPOSE: Make the styling for all pages
 */
 
 
@@ -30,7 +28,7 @@ PURPOSE:
     margin: 14px 0 8px;
   }
   body {
-    background-image: url(../images/top-bg.png);
+    background-image: url(../images/background.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black;
@@ -135,98 +133,40 @@ PURPOSE:
   #navbar-container ul li {
     float: left;
   }
-  #navbar-container ul li a, .dropbtn {
+  #navbar-container ul li a, #dropbtn {
     display: inline-block;
     color: white;
     text-align: center;
     padding: 16px 16px;
     text-decoration: none;
   }
-  #navbar-container li a:hover, .dropdown:hover .dropbtn {
+  #navbar-container li a:hover, .dropdown:hover #dropbtn {
     background: rgba(29,31,33, 0.25);
   }
   #navbar-container li.dropdown {
     display: inline-block;
   }
   #navbar-container .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
   }
   #navbar-container .dropdown-content a {
-      color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
   }
   #navbar-container .dropdown-content a:hover {
     background-color: #f1f1f1;
   }
   #navbar-container .show {
-    display:block;
-  }
-  /*
-  #dropdownbar  {
-    color: white;
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    margin: 0;
-    padding: 16px;
-    z-index: 666;
-  }
-  #dropdownbar-content {
-    width: 100px;
-    height: auto;
-    display: none; 
-    margin: auto !important;
-    overflow: visible !important;
-    padding: 0;
-    position: relative;
-    right: 10px;  
-  }
-  #dropdownbar-content ul li {
-    border: none;   
-    background: linear-gradient(#f88327, #f43127);
-    position: relative;
-    right: 30px;
-    bottom: 10px;
-    text-align: left !important;
-    width: 120px;
-  }
-  #dropdownbar-content ul li a {
-    text-align: left;
-  }
-  #dropdownbar-content ul li:hover {
-    background: rgba(29,31,33, 0.75);
-  }
-  #dropdownbar:hover #dropdownbar-content {
     display: block;
   }
-  #dropdownbar:hover {
-    position:relative;
-    top: 135px;
-  }
-  #navbar-container ul{
-    overflow: visible;
-  }
-  div#dropdownbar:hover > li {
-    background: rgba(0, 0, 0, 0.2);
-    width: 120px;
-    height: 50px;
-    margin: 0;
-    position: relative;
-    bottom: 10px;
-    right: 25px;
-  }
-  #dropdownbar:hover #knot {
-    position: relative;
-    top: 15px;
-    right: 7px;
-  }*/
 
 
 /* main-content-container, Written by: Tony Timmy Tran */
@@ -271,12 +211,12 @@ PURPOSE:
   }
   #newsfeed-slideshow .article title {
     display: block;
-    font-size: 20px;    
+    font-size: 20px;
     margin-top: 20px;
   }
 
 
-/* sections, Written by: Tony Timmy Tran */
+/* columns, Written by: Tony Timmy Tran */
   .columns {
     display: inline-block;
     width:100%;
@@ -301,15 +241,17 @@ PURPOSE:
       padding:0;
     }
   }
+
+/* sections, Written by: Tony Timmy Tran */
+  /* big sections will have space for exactly 5 list items */
   .big-section {
     margin-top: 20px;
-    width: 100%; height: 440px;
+    width: 100%; min-height: 440px; /* min height to preserve space for at least 5 list items */
     background-color: #1d1f21;
     box-sizing: border-box;
     border: 1px solid black;
     border-top: 0px;
   }
-  
   .big-section > .sectionbar > div {
     margin-left: 16px;
   }
@@ -333,8 +275,13 @@ PURPOSE:
     float: left;
     display: inline-block;
     width: 62px; height: 62px;
-    margin: 4px;
+    overflow: hidden;
+    border:1px solid black;
+    margin: 3px;
     background: #fff;
+  }
+  .big-section > .content .image > img {
+      height:100%;
   }
   .big-section > .content .desc {
     height:70px;
@@ -350,6 +297,7 @@ PURPOSE:
   .big-section > .read-more {
     margin: auto;
     margin-top: 8px;
+    margin-bottom: 8px;
     text-align: center;
   }
   .big-section > .read-more a:visited {
@@ -410,9 +358,6 @@ PURPOSE:
     }
   }
 
-/*-----------------*/
-/* GENERAL CLASSES */
-/*-----------------*/
 
 .container {
   width: calc(60% + 100px);
@@ -450,6 +395,7 @@ PURPOSE:
   .sectionbar > * {
     height:50px;
   }
+
 /* slideshow, Written by: Tony Timmy Tran */
   .slideshow {
     position:relative;
@@ -510,7 +456,7 @@ PURPOSE:
     margin-left: auto;
   }
   .slideshow > .buttons > .arrows > .prev {
-    margin-left: 20px; 
+    margin-left: 20px;
   }
   .slideshow > .buttons > .arrows > *:hover {
     -webkit-transition: 0.6s ease;
@@ -592,8 +538,9 @@ PURPOSE:
     transition: 0.5s;
     left: -100%;
   }
+
 /* wrappers, Written by: Tony Timmy Tran */
-  .wrapper-fixed-ratio { 
+  .wrapper-fixed-ratio {
     /* How to use this wrapper:
     use padding-bottom as height for the element.
     create a div inside this wrapper element
@@ -718,14 +665,61 @@ ul#faq > li > ul > li {
   }
 
   /* Styling of the close button on the modal */
-  .close-button {
+  #popup_close {
     color: white;
     float: right;
     font-size: 1.5em;
   }
 
-  .close-button:hover, .close-button:focus {
+  #popup_close:hover, #popup_close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* Article section */
+  .inlineImg {
+  float: left;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  margin: 15px 15px;
+  }
+  .articleCont {
+  margin: -1px;
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background-color: #1d1f21;
+  border: 1px solid black;
+  }
+  .articleText {
+  position: relative;
+  top: 15px;
+  max-height: 100px;
+  overflow: hidden;
+  }
+  .articleText > p {
+  margin: 0;
+  }
+  #navbar-bottom {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  color: white;
+  }
+  #navbar-bottom a {
+  color: white;
+  margin: 5px;
+  text-decoration: none;
+  }
+  #currentPage {
+  font-size: 2em;
+  }
+  #navbar-bottom a:visited {
+  color: lightgray;
+  }
+  .chevron {
+  font-size: 3em;
+  }
+  /* End of article section */

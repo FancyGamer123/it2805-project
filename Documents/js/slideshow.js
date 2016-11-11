@@ -1,8 +1,7 @@
-/* 
-FILE NAME: js/slideshow.js 
+/*
+FILE NAME: slideshow.js
 WRITTEN BY: Tony Timmy Tran
-START DATE: 27.10.2016
-FINISH DATE: 05.11.2016
+WHEN: 2016-10-27
 PURPOSE:
 	Including this script to a html file will give the user the possibility to easily create a Slideshow object.
 	The Slideshow object constructer will automatically add DOM elements to the slideshow (and the description if wanted)
@@ -11,11 +10,11 @@ PURPOSE:
 	(By "user", I mean the man who wants to use this script, which in this case, me)
 
 HOW TO USE:
-	The Slideshow object constructer normally takes 2 arguments. If a description text beside the slideshow is wanted, 
+	The Slideshow object constructer normally takes 2 arguments. If a description text beside the slideshow is wanted,
 	then the user has to add parse additionally 3 parametres.
-	First parameter has to be the DOM element where the client wants the slideshow to be. That element has to have 
+	First parameter has to be the DOM element where the client wants the slideshow to be. That element has to have
 	a "slideshow" in its classList
-	Second parameter has to be an array with sources of the images the user wants to show. The first element 
+	Second parameter has to be an array with sources of the images the user wants to show. The first element
 	in the array will be shown first.
 	Optional parametres:
 		If a description is wanted, add the 3rd, 4th and 5th parametres
@@ -25,60 +24,63 @@ HOW TO USE:
 INSPIRATION:
 	http://www.w3schools.com/howto/howto_js_slideshow.asp (which did not really help me that much, except for the look).
 OTHER NOTES:
-	I made the arrow_next.svg and arrow_prev.svg myself
-	I've included my older coding in the bottom of this file (commented away) to prove that it is my code.
+	- I made the arrow_next.svg and arrow_prev.svg myself
+	- I've included my older coding in the bottom of this file (commented away) to prove that it is my code.
+	- The reason that there is 3 images, is to preload the images adjacent to the current visible image.
+	  So that the user can navigate through the images without waiting too long for the images to be downloaded.
+	  But when pressing the dots, the images has to be downloaded at the time the user presses, since if the slideshow hundreds of images, we preload all the images in the beginning, it will consume unnecessary much data.
 */
 
 
-window.onload = function() {
-	//get the current html page file name
-	var urlStr = window.location.pathname;
-	var fileName = urlStr.substring(urlStr.lastIndexOf('/')+1, urlStr.length);
+//get the current html page file name
+var urlStr = window.location.pathname;
+var fileName = urlStr.substring(urlStr.lastIndexOf('/')+1, urlStr.length);
+if (fileName == "index.html" || fileName == ""){ //if the html is index.html
+	//set where the slideshow is
+	let slideshow = document.querySelector("#newsfeed-slideshow .slideshow");
+	//set where the description is
+	let description = document.querySelector("#newsfeed-slideshow .description");
+	console.log("creating");
+	// optional way to write the array's of images, descriptions and links
+	// Declares the relative paths
+	let imageRelativePath = "docs/images/";
+	let descriptionRelativePath = "docs/texts/";
+	let linkRelativePath = "docs/pages/";
+	// Declares the filename of the desired files
+	let slides = [
+	{img:'1.jpg', alt:'a',desc:'1.xml', link:'1.html'},
+	{img:'2.jpg', alt:'b',desc:'2.xml', link:'2.html'},
+	{img:'3.jpg', alt:'c',desc:'3.xml', link:'3.html'},
+	{img:'4.jpg', alt:'d',desc:'4.xml', link:'4.html'},
+	{img:'5.jpg', alt:'e',desc:'5.xml', link:'5.html'}];
 
-	if (fileName == "index.html" || fileName == ""){ //if the html is index.html
-		//set where the slideshow is
-		let slideshow = document.querySelector("#newsfeed-slideshow .slideshow");
-		//set where the description is
-		let description = document.querySelector("#newsfeed-slideshow .description");
-
-		// optional way to write the array's of images, descriptions and links
-		// Declares the relative paths
-		let imageRelativePath = "articles/images/";
-		let descriptionRelativePath = "articles/texts/";
-		let linkRelativePath = "articles/pages/"
-		// Declares the filename of the desired files
-		let slides = [
-		{img:'1.jpg',desc:'1.xml', link:'1.html'},
-		{img:'2.jpg',desc:'2.xml', link:'2.html'},
-		{img:'3.jpg',desc:'3.xml', link:'3.html'},
-		{img:'4.jpg',desc:'4.xml', link:'4.html'},
-		{img:'5.jpg',desc:'5.xml', link:'5.html'}];
-
-		//join together the relative path and filenames
-		let imageList = [];
-		let descriptionList = [];
-		let linkList = [];
-		for (let i = 0; i < slides.length; i++){
-			imageList[i] = imageRelativePath + slides[i].img
-			descriptionList[i] = descriptionRelativePath + slides[i].desc;
-			linkList[i] = linkRelativePath + slides[i].link;
-		}
-
-		//make the slideshow object
-		let ss1 = new Slideshow(slideshow, imageList, description, descriptionList, linkList);
-
+	//join together the relative path and filenames
+	let imageList = [];
+	let altList = [];
+	let descriptionList = [];
+	let linkList = [];
+	for (let i = 0; i < slides.length; i++){
+		imageList[i] = imageRelativePath + slides[i].img;
+		altList[i] = slides[i].alt;
+		descriptionList[i] = descriptionRelativePath + slides[i].desc;
+		linkList[i] = linkRelativePath + slides[i].link;
 	}
-	else if (fileName == "galleri.html"){
-		let slideshow = document.querySelector("#gallery1 .slideshow");
-		let imageRelativePath = "articles/images/";
-		let imageList = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"];
 
-		//join together the relative path and filenames
-		for (let i = 0; i < imageList.length; i++)
-			imageList[i] = imageRelativePath + imageList[i];
-		//make the slideshow object
-		let ss = new Slideshow(slideshow, imageList);
-	}
+	//make the slideshow object
+	let ss = new Slideshow(slideshow, imageList, altList, description, descriptionList, linkList);
+
+}
+else if (fileName == "galleri.html"){
+	let slideshow = document.querySelector("#gallery1 .slideshow");
+	let imageRelativePath = "docs/images/";
+	let imageList = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"];
+	let altList = ["a", "b", "c", "d", "e", "f"];
+
+	//join together the relative path and filenames
+	for (let i = 0; i < imageList.length; i++)
+		imageList[i] = imageRelativePath + imageList[i];
+	//make the slideshow object
+	let ss = new Slideshow(slideshow, imageList, altList);
 }
 
 
@@ -88,25 +90,41 @@ window.onload = function() {
 /* GENERAL FUNCTIONS */
 /*-------------------*/
 
+//An object constructor for slideshows
+function Slideshow(slideshow, imageList, altList, description, descList, linkList){
+	//------START OF VERY SIMPLE ERROR HANDLING-----------------------------------
+	//Error handling for slideshow
+	var checkObject = function (param){
+		throw "ERROR, " + e + " is not an object";
+	}
+	if (slideshow != "" || imageList != "" || altList != ""){
+		if (typeof slideshow !== "object")
+			errNotObject("slideshow");
+		if (typeof imageList !== "object")
+			errNotObject("imageList");
+		if (typeof altList !== "object")
+			errNotObject("altList");
+	}
+	//Error handling for description
+	//if one of the optional parametres are used, then the other optional parametres also needs to be set.
+	if (description != "" || descList != "" || linkList != ""){
+		if (typeof description !== "object")
+			errNotObject("description");
+		if (typeof descList !== "object")
+			errNotObject("descList");
+		if (typeof linkList !== "object")
+			errNotObject("linkList");
+	}
+	//-----END OF ERROR HANDLING---------------------------------------
 
-function Slideshow(slideshow, imageList, description, descList, linkList){  //descList is optional
 	//store the parametres into private variables
 	this.ss = slideshow;	//the element with class="slideshow"
 	this.imageList = imageList; // an array of image sources
+	this.altList = altList; // an array of alt texts
 	this.description = description || ""; // optional, the element intended to be a slideshow-description
 	this.descList = descList || ""; // optional, an array of description sources
 	this.linkList = linkList || ""; // optional, an array of links
 
-	//A little error handling
-	//if one of the optional parametres are used, then the other optional parametres also needs to be set.
-	if (this.description != "" || this.descList != "" || this.linkList != ""){
-		if (this.description == "")
-			throw "ERROR, missing description-element";
-		if (this.descList == "")
-			throw "ERROR, missing description list";
-		if (this.linkList == "")
-			throw "ERROR, missing link list";
-	}
 
 	/*
 	This Slideshow object will create HTML elements automatically on creation.
@@ -116,7 +134,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 
 	/* START Default elements */
 
-	/* there should be 3 image containers. 
+	/* there should be 3 image containers.
 		One to the left, outside of the visible container, calls imageContainer[0]
 		One in the middle covering the visible container, calls imageContainer[1]
 		One to the right, outside of the viewable container, calls imageContainer[2]
@@ -128,25 +146,26 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 	for (let i = 0; i < 3; i++){
 		let l = this.imageList.length;
 		image_str += '<div class="image img' + i + '"><div><img src="' +
-		this.imageList[((i-1)%l+l)%l] + '"></div></div>';
+		this.imageList[((i-1)%l+l)%l] + '" alt="' + 
+		this.altList[((i-1)%l+l)%l] + '"></div></div>';
 	}
 	/*add the image_str to innerHTML, even the slideshow shouldn't have anything yet.
 	But in case there is an absolute positioned element the "user"of this js decided to put into the slideshow element.
 	Therefore I use "+=" instead of "=" */
-	this.ss.innerHTML += image_str; 
+	this.ss.innerHTML += image_str;
 	//create buttons to be added to the innerHTML of the slideshow
 	var buttons_str = '<div class="buttons">' +
 	'<div class="arrows wrapper-valign-center">' +
 		'<div class="prev">'+
-			'<img src="buttons/arrow_prev.svg">'+
+			'<img src="images/buttons/arrow_prev.svg">'+
 		'</div><div class="next">' +
-			'<img src="buttons/arrow_next.svg">' +
+			'<img src="images/buttons/arrow_next.svg">' +
 	'</div></div>';
 	//create the dots to be added to the buttons
 	//the amount of dots should be the same as the length of the imageList
 	var dots_string = '<div class="dots"><div><div class="dot selected"></div>';
 	for(let i = 1; i < this.imageList.length; i++)//generate the dots
-		dots_string += '<div class="dot"></div>'; 
+		dots_string += '<div class="dot"></div>';
 	//add the dots to the buttons, together with the end-tags of the buttons
 	buttons_str += dots_string + "</div></div></div>";
 	//add the buttons to the slideshow.
@@ -160,7 +179,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 	var images = this.ss.querySelectorAll(".image > div > img");
 
 	//create methods for later use
-	this.getCurrentDirection = function () { 
+	this.getCurrentDirection = function () {
 		/* gets the current direction of the slide. (Actually the clicked direction, because the images move to the opposite direction)
 		Can only be used before the img-move-<direction> class gets removed
 		Which also means that he img-move-<direction> class must be removed last*/
@@ -176,7 +195,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 	}
 	this.getCurrentIndex = function () {
 		/* gets the current index of the image according to the imageList of the visible imageContainer
-		While the containers are moving, this method will return that index of the image of the 
+		While the containers are moving, this method will return that index of the image of the
 		containter which will come to the visible area.
 		*/
 		//gets the direction
@@ -184,7 +203,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 		//if it is not moving, then imageContainer[1] is the visible container
 		//if clicked to the left (image moved to right), then imageContainer[0] is visible
 		//if clicked to the right (image moved to left), then imageContainer[2] is visible
-		var img = currentDirection == "" ? 1 : currentDirection == "left" ? 0 : 2; 
+		var img = currentDirection == "" ? 1 : currentDirection == "left" ? 0 : 2;
 		//return the index of that image in the imageList
 		return this.imageList.indexOf(imageContainers[img].querySelector("div > img").getAttribute("src"));
 	}
@@ -211,7 +230,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 		//add the move-class to all the imageContainers
 		for (let i = 0; i < 3; i++)
 			imageContainers[i].classList.add("img-move-" + direction);
-		/*since the image is already moving, the getCurrentIndex() will return the 
+		/*since the image is already moving, the getCurrentIndex() will return the
 		index of the image that will soon come to the middle.*/
 		var index = this.getCurrentIndex();
 		//change the dot
@@ -225,23 +244,16 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 		if (currentIndex == index)
 			console.log("no moving desired");
 		else {
+			/*if the current is less than the desired one then, change the right imageContainer to the desired image.
+			Else, change the left imageContainer to the desired image. This make sure that the desired image will show up when the image starts moving.
+			*/
+			//n is the which image (left or right) to change to the desired image.
+			var n = currentIndex < index ? 2 : 0;
 			//set the direction to nothing for later use
-			var direction = "";
-			//if the current is less than the desired one
-			if (currentIndex < index) {
-				/*change the image of the right-imageContainer to the image of the desired index
-				, so that when moving the image, it will that image will appear*/
-				images[2].src = this.imageList[index];
-				//set the direction to right for later use
-				direction = "right";
-			}
-			else {
-				/*change the image of the right-imageContainer to the image of the desired index
-				, so that when moving the image, it will that image will appear*/
-				images[0].src = this.imageList[index];
-				//set the direction to left for later use
-				direction = "left";
-			}
+			var direction = n == 2 ? "right" : "left";
+			//change the alt text and src of the image
+			images[n].alt = this.altList[index];
+			images[n].src = this.imageList[index];
 			/* move the imageContainers to the direction, so that the css animation could start */
 			this.moveImage(direction); //this automatically changes the dots
 		}
@@ -264,16 +276,18 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 		//change the src of the images to the left and right. We already know that the one in the middle is correct
 		//get the index of the image in the middle according to the imageList
 		var index = this.getCurrentIndex();
-		//loop two times, i=0 and i=2. And the change the src according to the index.
+		//loop two times, i=0 and i=2. And the change the src and alt according to the index.
 		//left img should have src of index - 1, and right img should have src of index + 1
-		for (let i = 0, l = this.imageList.length; i < 3; i+=2) 
+		for (let i = 0, l = this.imageList.length; i < 3; i+=2){
+			images[i].alt = this.altList[(( i - 1 + index)%l + l)%l];
 			images[i].src = this.imageList[(( i - 1 + index)%l + l)%l];
+		}
 	}
 
-
+	console.log("it is working");
 	/*inside addEventListeners, "this" changes to that specific element listening for events.
 	so i have to store this in that for later use*/
-    var that = this; 
+    var that = this;
     if (this.description != ""){ //if a description is wanted
     	//create new methods for later use
 		this.loadFileToElement = function(filepath, element){
@@ -380,7 +394,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 			}
 			//if the images are already moving, then presseing this button will do nothing
 		});
-		
+
 		//when the middle imageContainer stops after a moving
 		imageContainers[1].addEventListener("transitionend", function() {
 			//run the methods special made for this event
@@ -400,7 +414,7 @@ function Slideshow(slideshow, imageList, description, descList, linkList){  //de
 				//if the images are already moving, then presseing these dot-buttons will do nothing
 			});
 		}
-	} 
+	}
 	else {	//if only slideshow
 		//listen to the click of the left arrow button
 		arrows[0].addEventListener('click', function() {
@@ -594,4 +608,3 @@ function getCurrentDirection(imageContainer1){ //prevent moving both ways
 	else return "";
 }
 */
-

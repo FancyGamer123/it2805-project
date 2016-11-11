@@ -3,7 +3,10 @@ FILENAME: leetspeak.js
 WRITTEN BY: Håvard Løkensgard
 WHEN: 2016-10-25
 PURPOSE: Change the text on the webpage to leetspeak.
- */
+*/
+
+// Get the element were attaching the eventlistener to
+var bliMedlem = document.getElementById("bliMedlem");
 
 // Leetspeak dictionary
 var alphabets = {
@@ -20,19 +23,15 @@ var alphabets = {
 };
 
 // List of all tags to be rewritten
-var ider = [
-    "leettitle",
-    "leethjemoverskrift"
-];
-
 var tags = [
     "h1",
     "h2"
 ];
 
-// Variabel som holder styr på om websiden har blitt konvertert eller ikke.
+// Variable that is set when the site is converted
 var haveConvertet = false;
 
+// Function that converts the page to leetspeak. If already converted, reload the page.
 function leetspeakConverter() {
     if (!haveConvertet) {
         convertToLeet();
@@ -43,6 +42,7 @@ function leetspeakConverter() {
     }
 }
 
+// Main function that converts text to leetspeak
 function convertToLeet() {
     // Go through the list of tags we wish to convert
     for (var i = 0; i < tags.length; i++) {
@@ -67,3 +67,6 @@ function convertToLeet() {
         }
     }
 }
+
+// Add click listener to the button
+bliMedlem.addEventListener("click", leetspeakConverter);
