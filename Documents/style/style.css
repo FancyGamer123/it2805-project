@@ -715,25 +715,25 @@ ul#faq > li > ul > li {
   background-color: white;
   box-sizing: border-box;
   border: 1px solid black;
-  width: 100px;
-  height: 100px;
+  width: 140px;
+  height: 140px;
   margin: 15px 15px;
   }
-  .articleCont {
+  .reviewCont {
   margin: -1px;
   position: relative;
   width: 100%;
-  height: 130px;
+  height: 170px;
   background-color: #1d1f21;
   border: 1px solid black;
   }
-  .articleText {
+  .reviewBody {
   position: relative;
   top: 15px;
-  max-height: 100px;
+  max-height: 140px;
   overflow: hidden;
   }
-  .articleText > p {
+  .reviewBody > p {
   margin: 0;
   }
   #navbar-bottom {
@@ -756,43 +756,25 @@ ul#faq > li > ul > li {
   .chevron {
   font-size: 3em;
   }
-  .articleText h3 {
+  .reviewBody h3 {
   font-weight: normal;
   margin: 0;
   }
-  .gone {
-  visibility: hidden;
-  }
-
-  .reviewCont {
-  margin: -1px;
-  position: relative;
-  width: 100%;
-  height: 170px;
-  background-color: #1d1f21;
-  border: 1px solid black;
-  }
-  .reviewText {
-  position: relative;
-  top: 15px;
-  max-height: 140px;
-  overflow: hidden;
-  }
-  .reviewText > p {
-  margin: 0;
-  }
-  .reviewText h3 {
-  font-weight: normal;
-  margin: 0;
-  }
-  .reviewText h2 {
+  .reviewBody h2 {
   border: 1px solid red;
   display: inline-block;
   border-radius: 1em;
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0;
   color: white;
+  }
+  .reviewText {
+  height: 85px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  padding: 0;
   }
  /* End of article and review section */
 
