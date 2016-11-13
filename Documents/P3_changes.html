@@ -61,11 +61,9 @@
 				<h2>3. Endringer</h2>
 
 				<!-- ENDRINGER PÅ FILER -->
+
 				<h3>Endringer på index.html</h3>
 				<p>Endret bort "topplisten" og "følg oss" seksjonene og byttet inn "recommended sites" og "recommended games"</p>
-
-				<h3>Endringer på blimedlem.html</h3>
-				<p>Endret </p>
 
 				<h3>Endringer på galleri.html</h3>
 				<p>Endret på utseende til galleriet slik at den ser akkurat ut som den i newsfeed in index.html.</p>
@@ -88,6 +86,22 @@
 				<h3>Endringer på dropdownmenu.js</h3>
 				<p>Endret til å vise dropdown bare når en brukeren trykker på "Mer". Dette er gjort for at nettsiden skal ha samme funksjonalitet på en touch enhet.</p>
 
+				<h3>Endringer på styling</h3>
+				<ul>
+					<li>Font: "Helvetica, Arial, sans-serif" for både header, body og footer</li>
+					<li>Color scheme: Oransje farge sammen med mørke/sorte farger for nettsiden generelt</li>
+					<li>Body width: 60% + 100px. Minste bredde for hele siden er 525px</li>
+					<li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
+					<li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
+					<li>Background Image: Gaming relatert bilde som dekker siden</li>
+				</ul>
+
+				<h3>Endringer på navigasjons baren</h3>
+				<ul>
+					<li>Byttet ut "Om oss" med "Mer", siden det er mer passende.</li>
+					<li>La til en leetspeak knapp til høyre siden av baren</li>
+				</ul>
+				<br>
 
 				<!-- TILLEGG -->
 				<h3>Tilleggsfil meta.html</h3>
@@ -105,34 +119,17 @@
 				<h3>Tilleggsfil scripts.html</h3>
 				<p>Vi la til en HTML template som laster inn alle JavaScript-skriptene som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
-				<h3>Tilleggsfil dummyX.html</h3>
+				<h3>Tilleggsfil dummy*.html</h3>
 				<p>Hver artikkel har sin egen html fil</p>
 
-				<h3>Tilleggsfil smartieX.html</h3>
+				<h3>Tilleggsfil smartie*.html</h3>
 				<p>Hver omtale har sin egen html fil</p>
 
 
-				<!-- ENDRINGER PÅ STYLE -->
-				<!--<h3>TODO: Endringer på styling</h3>
-				<ul>
-					<li>Font: Arial, Helvetica, sans-serif for både header, body og footer</li>
-					<li>Color scheme: Mørke farger for nettsiden generelt</li>
-					<li>Body width: 75%</li>
-					<li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
-					<li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
-					<li>Background Image: Gaming relatert bilde som dekker siden</li>
-				</ul>-->
-				<h3>Endringer på styling</h3>
-				<ul>
-					<li>Font: "Helvetica, Arial, sans-serif" for både header, body og footer</li>
-					<li>Color scheme: Oransje farge sammen med mørke/sorte farger for nettsiden generelt</li>
-					<li>Body width: 60% + 100px. Minste bredde for hele siden er 525px</li>
-					<li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
-					<li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
-					<li>Background Image: Gaming relatert bilde som dekker siden</li>
-				</ul>
+
 
 				<!-- KRAV -->
+				<br>
 				<h3>Javascript krav 1: list_item.js</h3>
 				<p>Timmy har oppfylt JavaScript-kravet med å dynamisk laste inn elementer i en liste.</p>
 
@@ -318,61 +315,61 @@
 
 				<h3>Endelig filstruktur</h3>
 				<ul>
-					<li>index.html</li>
-					<li>kontaktoss.html</li>
-					<li>galleri.html</li>
-					<li>info.html</li>
-					<li>blimedlem.html</li>
-					<li>faq.html</li>
-					<li>.htaccess</li>
+					<li>index.html - Timmy</li>
+					<li>kontaktoss.html - Håvard</li>
+					<li>galleri.html - Timmy</li>
+					<li>info.html - Sandor</li>
+					<li>blimedlem.html - Håvard</li>
+					<li>faq.html - Sandor</li>
+					<li>.htaccess - Sandor</li>
 					<li>templates/
 						<ul>
-							<li>meta.html</li>
-							<li>header.html</li>
-							<li>footer.html</li>
-							<li>joinuspopup.html</li>
-							<li>scripts.html</li>
+							<li>meta.html - Sandor</li>
+							<li>header.html - Sandor + Timmy</li>
+							<li>footer.html - Timmy</li>
+							<li>joinuspopup.html - Sandor</li>
+							<li>scripts.html - Sandor</li>
 						</ul>
 					</li>
 					<li>style/
-						<ul><li>style.css</li></ul>
+						<ul><li>style.css - Alle</li></ul>
 					</li>
 					<li>docs/
 						<ul>
-							<li>artikler*.html</li>
-							<li>omtaler*.html</li>
+							<li>artikler*.html - Henrik</li>
+							<li>omtaler*.html - Henrik</li>
 							<li>slideshow/
-								<ul><li>*.jpg</li></ul>
+								<ul><li>*.jpg - Timmy</li></ul>
 							</li>
 							<li>newsfeed/
 								<ul>
 									<li>images/
-										<ul><li>*.jpg</li></ul>
+										<ul><li>*.jpg - Timmy</li></ul>
 									</li>
 									<li>texts/
-										<ul><li>*.xml</li></ul>
+										<ul><li>*.xml - Timmy</li></ul>
 									</li>
 								</ul>
 							</li>
 							<li>articles/
 								<ul>
-									<li>*.html</li>
+									<li>*.html - Henrik</li>
 									<li>images/
-										<ul><li>*.png</li></ul>
+										<ul><li>*.png - Henrik</li></ul>
 									</li>
 									<li>images_62x62/
-										<ul><li>*.png</li></ul>
+										<ul><li>*.png - Timmy</li></ul>
 									</li>
 								</ul>
 							</li>
 							<li>reviews/
 								<ul>
-									<li>*.html</li>
+									<li>*.html - Henrik</li>
 									<li>images/
-										<ul><li>*.png</li></ul>
+										<ul><li>*.png - Timmy</li></ul>
 									</li>
 									<li>images_62x62/
-										<ul><li>*.png</li></ul>
+										<ul><li>*.png - Timmy</li></ul>
 									</li>
 								</ul>
 							</li>
@@ -380,28 +377,28 @@
 					</li>
 					<li>images/
 						<ul>
-							<li>logo.png</li>
-							<li>background.jpg</li>
-							<li>info_page.jpg</li>
-							<li>bar.png</li>
-							<li>mazemap.png</li>
+							<li>logo.png - Timmy</li>
+							<li>background.jpg - Timmy</li>
+							<li>info_page.jpg - Sandor</li>
+							<li>bar.png - Timmy</li>
+							<li>mazemap.png - Sandor</li>
 							<li>buttons/
 								<ul>
-									<li>arrow_next.svg</li>
-									<li>arrow_prev.svg</li>
+									<li>arrow_next.svg - Timmy</li>
+									<li>arrow_prev.svg - Timmy</li>
 								</ul>
 							</li>
 						</ul>
 					</li>
 					<li>js/
 						<ul>
-							<li>index.js</li>
-							<li>galleri.js</li>
-							<li>dropdownmenu.js</li>
-							<li>leetspeak.js</li>
-							<li>joinuspopup.js</li>
-							<li>slideshow.js</li>
-							<li>list_item.js</li>
+							<li>index.js -Timmy</li>
+							<li>galleri.js - Timmy</li>
+							<li>dropdownmenu.js - Sandor</li>
+							<li>leetspeak.js - Håvard</li>
+							<li>joinuspopup.js - Sandor</li>
+							<li>slideshow.js - Timmy</li>
+							<li>list_item.js - Timmy</li>
 						</ul>
 					</li>
 				</ul>
