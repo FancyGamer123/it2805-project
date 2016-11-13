@@ -168,6 +168,30 @@ PURPOSE: Make the styling for all pages
     display: block;
   }
 
+/* leetspeak-btn, Written by: Tony Timmy Tran*/
+#leetspeak-btn {
+  cursor: pointer;
+  position:absolute;
+  height:30px;
+  margin-top: 10px;
+  padding-left: 30px;
+  background: rgba(29,31,33, 0.25);
+  width:0;
+  right:16px;
+  top:0;
+  overflow:hidden;
+  transition: 0.6s ease;
+}
+#leetspeak-btn:hover {
+  background: blue;
+  padding-left: 15px;
+  width:90px;
+}
+
+
+
+
+
 /* main-content-container, Written by: Tony Timmy Tran */
   #main-content-container {
     box-sizing: border-box;

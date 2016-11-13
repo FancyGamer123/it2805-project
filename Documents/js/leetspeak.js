@@ -1,12 +1,10 @@
 /*
 FILENAME: leetspeak.js
 WRITTEN BY: Håvard Løkensgard
-WHEN: 2016-10-25
-PURPOSE: Change the text on the webpage to leetspeak.
+WHEN: 2016-11-13
+PURPOSE: Change the text on the webpage to leetspeak. Once enabled, the leetspeak function will stay 
+        until the user clicks on the button once again, which will disable it.
 */
-
-// Get the element were attaching the eventlistener to
-var bliMedlem = document.getElementById("bliMedlem");
 
 // Leetspeak dictionary
 var alphabets = {
@@ -22,37 +20,59 @@ var alphabets = {
     z: "2"
 };
 
-// List of all tags to be rewritten
-var tags = [
+// List of all selectors to be rewritten
+var selectors = [
     "h1",
-    "h2"
+    "h2",
+    "h3",
+    "h4",
+    "#navbar-container li a",
+    ".sectionbar > div"
 ];
 
-// Variable that is set when the site is converted
-var haveConvertet = false;
+
+window.addEventListener("load", function(){
+    // find out if the site should be converted
+    var haveConvertet = localStorage.getItem("leetspeak");
+
+    //if it should be converted, convert it.
+    if (haveConvertet == "1")
+        convertToLeet();
+
+    // Get the element to attaching eventlistener to
+    var btn = document.getElementById("leetspeak-btn");
+    // Add click listener to the button
+    btn.addEventListener("click", leetspeakConverter);
+});
+
 
 // Function that converts the page to leetspeak. If already converted, reload the page.
 function leetspeakConverter() {
-    if (!haveConvertet) {
-        convertToLeet();
-        haveConvertet = true;
-    } else {
+    //get the current state of the site, (is leetspeak used or not)
+    haveConvertet = localStorage.getItem("leetspeak");
+    //if it is used
+    if (haveConvertet == "1") {
+        //then change it to not used and reload the page
+        localStorage.setItem("leetspeak", "0")
         location.reload();
-        haveConvertet = false;
+    } else {
+        //else then change it to used and convert the page
+        localStorage.setItem("leetspeak", "1")
+        convertToLeet();
     }
 }
 
 // Main function that converts text to leetspeak
 function convertToLeet() {
-    // Go through the list of tags we wish to convert
-    for (var i = 0; i < tags.length; i++) {
-        // Get list of elements with the current tag
-        var currentTag = document.getElementsByTagName(tags[i]);
+    // Go through the list of selectors we wish to convert
+    for (var i = 0; i < selectors.length; i++) {
+        // Get list of elements with the current selector
+        var currentSelector = document.querySelectorAll(selectors[i]);
 
-        // Iterate over all the elements with the current tag
-        for (var j = 0; j < currentTag.length; j++) {
+        // Iterate over all the elements with the current selector
+        for (var j = 0; j < currentSelector.length; j++) {
             // Get the text of the current element
-            var currentText = currentTag[j].innerHTML;
+            var currentText = currentSelector[j].innerHTML;
 
             // Replace characters in the text with leetspeak
             for (var k = 0; k < currentText.length; k++) {
@@ -63,10 +83,7 @@ function convertToLeet() {
             }
 
             // Set new innerHTML
-            currentTag[j].innerHTML = currentText;
+            currentSelector[j].innerHTML = currentText;
         }
     }
 }
-
-// Add click listener to the button
-bliMedlem.addEventListener("click", leetspeakConverter);
