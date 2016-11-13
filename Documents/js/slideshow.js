@@ -7,10 +7,12 @@ PURPOSE:
 	The Slideshow object constructer will automatically add DOM elements to the slideshow (and the description if wanted)
 	Automatically listens to events, such as left arrow click, right arrow click, clicking on dots and the event of the end of a css transition.
 	The script is meant to work with style.css.
-	(By "user", I mean the man who wants to use this script, which in this case, me)
+	The slideshow is intended to be working only for 3 to 20 images. More images will make this slideshow look weird, but will still work.
+	(this is because this website does not need to show more than 20 images on each slideshow. It is therefore better without the "img_index/img_total" label)
+	(By "user", I mean the man who uses this script, which in this case, is me)
 
 HOW TO USE:
-	The Slideshow object constructer normally takes 2 arguments. If a description text beside the slideshow is wanted,
+	The Slideshow object constructer normally takes 3 arguments. If a description text beside the slideshow is wanted,
 	then the user has to add parse additionally 3 parametres.
 	First parameter has to be the DOM element where the client wants the slideshow to be. That element has to have
 	a "slideshow" in its classList
@@ -26,96 +28,20 @@ INSPIRATION:
 OTHER NOTES:
 	- I made the arrow_next.svg and arrow_prev.svg myself
 	- I've included my older coding in the bottom of this file (commented away) to prove that it is my code.
-	- The reason that there is 3 images, is to preload the images adjacent to the current visible image.
+	- The reason that there are 3 images, is to preload the images adjacent to the current visible image.
 	  So that the user can navigate through the images without waiting too long for the images to be downloaded.
-	  But when pressing the dots, the images has to be downloaded at the time the user presses, since if the slideshow hundreds of images, we preload all the images in the beginning, it will consume unnecessary much data.
+	  But when pressing the dots, the images has to be downloaded at the time the user presses, since if the slideshow hundreds of images
+	  , we preload all the images in the beginning, it will consume unnecessary much data.
+
 */
 
 
-//get the current html page file name
-var urlStr = window.location.pathname;
-var fileName = urlStr.substring(urlStr.lastIndexOf('/')+1, urlStr.length);
-if (fileName == "index.html" || fileName == ""){ //if the html is index.html
-	//set where the slideshow is
-	let slideshow = document.querySelector("#newsfeed-slideshow .slideshow");
-	//set where the description is
-	let description = document.querySelector("#newsfeed-slideshow .description");
-	console.log("creating");
-	// optional way to write the array's of images, descriptions and links
-	// Declares the relative paths
-	let imageRelativePath = "docs/images/";
-	let descriptionRelativePath = "docs/texts/";
-	let linkRelativePath = "docs/pages/";
-	// Declares the filename of the desired files
-	let slides = [
-	{img:'1.jpg', alt:'a',desc:'1.xml', link:'1.html'},
-	{img:'2.jpg', alt:'b',desc:'2.xml', link:'2.html'},
-	{img:'3.jpg', alt:'c',desc:'3.xml', link:'3.html'},
-	{img:'4.jpg', alt:'d',desc:'4.xml', link:'4.html'},
-	{img:'5.jpg', alt:'e',desc:'5.xml', link:'5.html'}];
-
-	//join together the relative path and filenames
-	let imageList = [];
-	let altList = [];
-	let descriptionList = [];
-	let linkList = [];
-	for (let i = 0; i < slides.length; i++){
-		imageList[i] = imageRelativePath + slides[i].img;
-		altList[i] = slides[i].alt;
-		descriptionList[i] = descriptionRelativePath + slides[i].desc;
-		linkList[i] = linkRelativePath + slides[i].link;
-	}
-
-	//make the slideshow object
-	let ss = new Slideshow(slideshow, imageList, altList, description, descriptionList, linkList);
-
-}
-else if (fileName == "galleri.html"){
-	let slideshow = document.querySelector("#gallery1 .slideshow");
-	let imageRelativePath = "docs/images/";
-	let imageList = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg","6.jpg"];
-	let altList = ["a", "b", "c", "d", "e", "f"];
-
-	//join together the relative path and filenames
-	for (let i = 0; i < imageList.length; i++)
-		imageList[i] = imageRelativePath + imageList[i];
-	//make the slideshow object
-	let ss = new Slideshow(slideshow, imageList, altList);
-}
-
-
-
-
-/*-------------------*/
-/* GENERAL FUNCTIONS */
-/*-------------------*/
 
 //An object constructor for slideshows
 function Slideshow(slideshow, imageList, altList, description, descList, linkList){
-	//------START OF VERY SIMPLE ERROR HANDLING-----------------------------------
-	//Error handling for slideshow
-	var checkObject = function (param){
-		throw "ERROR, " + e + " is not an object";
-	}
-	if (slideshow != "" || imageList != "" || altList != ""){
-		if (typeof slideshow !== "object")
-			errNotObject("slideshow");
-		if (typeof imageList !== "object")
-			errNotObject("imageList");
-		if (typeof altList !== "object")
-			errNotObject("altList");
-	}
-	//Error handling for description
-	//if one of the optional parametres are used, then the other optional parametres also needs to be set.
-	if (description != "" || descList != "" || linkList != ""){
-		if (typeof description !== "object")
-			errNotObject("description");
-		if (typeof descList !== "object")
-			errNotObject("descList");
-		if (typeof linkList !== "object")
-			errNotObject("linkList");
-	}
-	//-----END OF ERROR HANDLING---------------------------------------
+	/* This Slideshow object will create HTML elements automatically on creation.
+	The moving is performed by adding and removing css classes. (img-move-<direction> and desc-move-<direction>)
+	*/
 
 	//store the parametres into private variables
 	this.ss = slideshow;	//the element with class="slideshow"
@@ -125,15 +51,7 @@ function Slideshow(slideshow, imageList, altList, description, descList, linkLis
 	this.descList = descList || ""; // optional, an array of description sources
 	this.linkList = linkList || ""; // optional, an array of links
 
-
-	/*
-	This Slideshow object will create HTML elements automatically on creation.
-	The moving is performed by adding and removing css classes. (img-move-<direction> and desc-move-<direction>)
-	*/
-
-
-	/* START Default elements */
-
+	/* START creating child elements */
 	/* there should be 3 image containers.
 		One to the left, outside of the visible container, calls imageContainer[0]
 		One in the middle covering the visible container, calls imageContainer[1]
@@ -170,7 +88,7 @@ function Slideshow(slideshow, imageList, altList, description, descList, linkLis
 	buttons_str += dots_string + "</div></div></div>";
 	//add the buttons to the slideshow.
 	this.ss.innerHTML += buttons_str;
-	/* END Default elements*/
+	/* END creating child elements*/
 
 	//create private members for easier to work with
 	var arrows = this.ss.querySelectorAll(".buttons > .arrows > *");

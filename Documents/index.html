@@ -1,7 +1,7 @@
 <!--
 FILE NAME: index.html
 WRITTEN BY: Tony Timmy Tran 
-WHEN: 2016-08-11
+WHEN: 2016-11-11
 PURPOSE: Show new articles and reviews. A top list of whatever, and a small section with "follow us".
 -->
 
@@ -39,7 +39,7 @@ PURPOSE: Show new articles and reviews. A top list of whatever, and a small sect
 									<ul></ul>
 								</div>
 								<div class="read-more">
-									<a href="artikler.html">Les mer</a>
+									<a href="docs/artikler1.html">Les mer</a>
 								</div>
 							</div>
 							<div id="nye-omtaler" class="big-section">
@@ -50,7 +50,7 @@ PURPOSE: Show new articles and reviews. A top list of whatever, and a small sect
 									<ul></ul>
 								</div>
 								<div class="read-more">
-									<a href="omtaler.html">Les mer</a>
+									<a href="docs/omtaler1.html">Les mer</a>
 								</div>
 							</div>
 						</div>
@@ -60,7 +60,7 @@ PURPOSE: Show new articles and reviews. A top list of whatever, and a small sect
 									<div class="wrapper-valign-center">Recommended Games</div>
 								</div>
 								<div class="content">
-									<ol>
+									<ol class="toplist-ol"> <!-- included this class because this section does not necessarily have a this kind of list. it could be whatever from divs to images-->
 										<li>The Last Guardian</li>
 										<li>Battlefield 1</li>
 										<li>Dishonored 2</li>
@@ -76,12 +76,17 @@ PURPOSE: Show new articles and reviews. A top list of whatever, and a small sect
 									<div class="wrapper-valign-center">Recommended sites</div>
 								</div>
 								<div class="content">
-									<ol>
+									<ol class="toplist-ol">
 										<li><a href="http://www.ign.com">IGN</a></li>
-										<li><a href="http://www.ign.com">ign.com</a></li>
-										<li><a href="http://www.ign.com">ign.com</a></li>
-										<li><a href="http://www.ign.com">ign.com</a></li>
-										<li><a href="http://www.ign.com">ign.com</a></li>
+										<li><a href="http://www.gamefaqs.com/">GameFAQs</a></li>
+										<li><a href="http://www.gamespot.com/">GameSpot</a></li>
+										<li><a href="http://kotaku.com/">Kotaku</a></li>
+										<li><a href="http://n4g.com/">N4G</a></li>
+										<li><a href="http://www.escapistmagazine.com/">EscapistMagazine</a></li>
+										<li><a href="http://www.pcgamer.com/">PCGamer</a></li>
+										<li><a href="http://www.neoseeker.com/">NeoSeeker</a></li>
+										<li><a href="http://www.giantbomb.com/">GiantBomb</a></li>
+										<li><a href="http://www.gamefront.com/">GameFront</a></li>
 									</ol>
 								</div>
 							</div>
@@ -98,6 +103,7 @@ PURPOSE: Show new articles and reviews. A top list of whatever, and a small sect
 			<!-- SCRIPTS -->
 			<!--#include virtual="templates/scripts.html" -->
 			<script src="js/slideshow.js"></script>
+			<script src="js/list_item.js"></script>
 			<script src="js/index.js"></script>
 		</div>
 	</body>

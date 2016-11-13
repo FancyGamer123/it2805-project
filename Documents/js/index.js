@@ -1,63 +1,102 @@
 /*
 FILE NAME: index.js
 WRITTEN BY: Tony Timmy Tran
-<<<<<<< HEAD
-START DATE: 05.11.2016
-FINISH DATE: 10.11.2016
-=======
-WHEN: 2016-11-05
->>>>>>> master
+WHEN: 2016-11-12
 PURPOSE:
-	Make list-items for the sections ("nye-artikler" and "nye-omtaler")
-
-Notes:
-	- Should be at least 5 list-items
-	- The images with size of 62x62 is preferred, but whatever size would work
-
+	Create slideshow and list-items for index.html
 */
 
 
-/*
+//set where the slideshow is
+let slideshow = document.querySelector("#newsfeed-slideshow .slideshow");
+//set where the description is
+let description = document.querySelector("#newsfeed-slideshow .description");
+console.log("creating");
+// optional way to write the array's of images, descriptions and links
+// Declares the relative paths
+let imageRelativePath = "docs/newsfeed/images/";
+let descriptionRelativePath = "docs/newsfeed/texts/";
+// Declares the filename of the desired files
+let slides = [
+{img:'Gears-of-War-4.jpg', alt:'Gears of War 4',desc:'1.xml', link:'docs/articles/dummy1.html'},
+{img:'RPG.jpg', alt:'Role Playing Game',desc:'2.xml', link:'docs/articles/dummy2.html'},
+{img:'cod4-remastered.jpg', alt:'Call of Duty 4 Modern Warfare Remastered',desc:'3.xml', link:'docs/reviews/smartie1.html'},
+{img:'owlboy.jpg', alt:'Owlboy Game',desc:'4.xml', link:'docs/reviews/smartie2.html'},
+{img:'PS1.jpg', alt:'A car game of Playstation',desc:'5.xml', link:'docs/articles/dummy3.html'}];
 
-/* add list-items to */
+//join together the relative path and filenames
+let imageList = [];
+let altList = [];
+let descriptionList = [];
+let linkList = [];
+for (let i = 0; i < slides.length; i++){
+	imageList[i] = imageRelativePath + slides[i].img;
+	altList[i] = slides[i].alt;
+	descriptionList[i] = descriptionRelativePath + slides[i].desc;
+	linkList[i] = slides[i].link;
+}
+
+//make the slideshow object
+let ss = new Slideshow(slideshow, imageList, altList, description, descriptionList, linkList);
+
+
+
+
+
+//select the unordered list of new articles
 let nyeArtiklerList = document.querySelector('#nye-artikler > .content > ul');
-let imgRelativePath1 = "docs/listImages/";
+//a convenient way to declare strings of image (source), link, title and text
+let imgRelativePath1 = "docs/articles/images_62x62/";
+let linkRelativePath1 = "docs/articles/"
 let articleList = [
-{img:"1.png", link:"1.html", title:"title1", text:"text1 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"2.png", link:"2.html", title:"title2", text:"text2 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"3.png", link:"3.html", title:"title3", text:"text3 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"4.png", link:"4.html", title:"title4", text:"text4 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"5.png", link:"5.html", title:"title5", text:"text5 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
+{img:"art1.png", link:"dummy1.html", title:"Suggesting Some Fixed Dialogue for Gears of War 4", text:"I may have given the impression, in my review of Gears of War 4, that I picked up on a degree of re"},
+{img:"art2.png", link:"dummy2.html", title:"This is How You Fix RPG Sidequests", text:"For no particular reason I'd like to bring up the concept of sidequests. The essential component of an o"},
+{img:"art3.png", link:"dummy3.html", title:"Predicting What's New on the Nostalgia Horizon - The PS1 Era", text:"Whoops, been a while since the last column, hasn't it; I've been rather occupied with moving from one sovereign nation"},
+{img:"art4.png", link:"dummy4.html", title:"id Software's History Parallels the Seven Ages of Man and the History of PC Gaming", text:"So in the end credits of ZP last week I made a throwaway comment to the effect that Id Software's game release history"},
+{img:"art5.png", link:"dummy5.html", title:"There's More to Comedy Games than Just Comic Relief Characters", text:"So let's talk about comedy games. In my last ZP I talked about Headlander, and how it felt more like a game with too many comic"},
 ]
+//loop though the array of objects 
 for (let i = 0; i < articleList.length; i++){
+	//shorten articleList[i] to a
 	let a = articleList[i];
-	let listItem = makeListItem(imgRelativePath1 + a.img, a.title, a.text, a.link);
+	//create the list-item according to the properties of the current object
+	let listItem = makeListItem(imgRelativePath1 + a.img, a.title, a.text, linkRelativePath1 + a.link);
+	//append the list-item to the unordered list
 	nyeArtiklerList.appendChild(listItem);
 }
 
+
+
+//select the unordered list of new reviews
 let nyeOmtalerList = document.querySelector('#nye-omtaler > .content > ul');
-let imgRelativePath2 = "docs/listImages/";
+let imgRelativePath2 = "docs/reviews/images_62x62/";
+let linkRelativePath2 = "docs/reviews/"
 let reviewList = [
-{img:"1.png", link:"1.html", title:"title1", text:"text1 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"2.png", link:"2.html", title:"title2", text:"text2 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"3.png", link:"3.html", title:"title3", text:"text3 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"4.png", link:"4.html", title:"title4", text:"text4 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
-{img:"5.png", link:"5.html", title:"title5", text:"text5 - Lorem.... bla bla bla blabla blabla blabla blabla bla"},
+{img:"1.png", link:"smartie1.html", title:"Call of Duty: Modern Warfare Remastered Review", text:"Once held up as the great example for contemporary-era shooters, Call of Duty 4: Modern Warfare is now"},
+{img:"2.png", link:"smartie2.html", title:"Owlboy Review", text:"Owlboy is a game about weakness, but for its lovable cast of characters, individual weaknesses only strengthen"},
+{img:"3.png", link:"smartie3.html", title:"Hitman Episode 6: Hokkaido Review", text:"Io Interactive’s episodic Hitman experiment is over – or at least, the first season is anyhow. The end result"},
+{img:"4.png", link:"smartie4.html", title:"The Elder Scrolls V: Skyrim Special Edition PC Review", text:"When I play a remastered version of a game I love, I expect it to be at least as good as the old one in every"},
+{img:"5.png", link:"smartie5.html", title:"Lorem5", text:"Lorem contents... bla bla bla blabla blabla blabla blabla bla"}, //we still don't have 5 reviews ready
 ]
 for (let i = 0; i < reviewList.length; i++){
 	let a = reviewList[i];
-	let listItem = makeListItem(imgRelativePath2 + a.img, a.title, a.text, a.link);
+	let listItem = makeListItem(imgRelativePath2 + a.img, a.title, a.text, linkRelativePath2 + a.link);
 	nyeOmtalerList.appendChild(listItem);
 }
 
+/*
 //function to make a list-item
 function makeListItem(imgSrc, title, text, link){
+	//create an empty list-item
 	var item = document.createElement('li');
+	//create the innerHTML of the item. The li element should contain one img, one title and one line of text.
 	var child = '<div class="image"><img src="' + imgSrc + '"></div><div class="desc"><h4>' + 
 	title + '</h4><p class="line-clamp">' + text + '</p></div>';
 	item.innerHTML = child;
+	//listen to a user click. And go to the link 
 	item.addEventListener('click', function(){
 		window.location.href = link;
 	});
+	//return this list-item as an element.
 	return item;
-}
+}*/
