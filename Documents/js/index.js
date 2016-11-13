@@ -36,7 +36,7 @@ for (let i = 0; i < slides.length; i++){
 	linkList[i] = slides[i].link;
 }
 
-//make the slideshow object
+//make the slideshow object (put it into an variable because someone could easily control the slideshow (with commands) with this variable)
 let ss = new Slideshow(slideshow, imageList, altList, description, descriptionList, linkList);
 
 
@@ -76,27 +76,10 @@ let reviewList = [
 {img:"2.png", link:"smartie2.html", title:"Owlboy Review", text:"Owlboy is a game about weakness, but for its lovable cast of characters, individual weaknesses only strengthen"},
 {img:"3.png", link:"smartie3.html", title:"Hitman Episode 6: Hokkaido Review", text:"Io Interactive’s episodic Hitman experiment is over – or at least, the first season is anyhow. The end result"},
 {img:"4.png", link:"smartie4.html", title:"The Elder Scrolls V: Skyrim Special Edition PC Review", text:"When I play a remastered version of a game I love, I expect it to be at least as good as the old one in every"},
-{img:"5.png", link:"smartie5.html", title:"Lorem5", text:"Lorem contents... bla bla bla blabla blabla blabla blabla bla"}, //we still don't have 5 reviews ready
+{img:"5.png", link:"smartie5.html", title:"Dark Souls 3: Ashes of Ariandel", text:"There’s something for every Dark Souls 3 fan to enjoy in Ashes of Ariandel, the first of two planned DLC packs. "}, //we still don't have 5 reviews ready
 ]
 for (let i = 0; i < reviewList.length; i++){
 	let a = reviewList[i];
 	let listItem = makeListItem(imgRelativePath2 + a.img, a.title, a.text, linkRelativePath2 + a.link);
 	nyeOmtalerList.appendChild(listItem);
 }
-
-/*
-//function to make a list-item
-function makeListItem(imgSrc, title, text, link){
-	//create an empty list-item
-	var item = document.createElement('li');
-	//create the innerHTML of the item. The li element should contain one img, one title and one line of text.
-	var child = '<div class="image"><img src="' + imgSrc + '"></div><div class="desc"><h4>' + 
-	title + '</h4><p class="line-clamp">' + text + '</p></div>';
-	item.innerHTML = child;
-	//listen to a user click. And go to the link 
-	item.addEventListener('click', function(){
-		window.location.href = link;
-	});
-	//return this list-item as an element.
-	return item;
-}*/
