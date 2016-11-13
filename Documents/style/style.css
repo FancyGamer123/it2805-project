@@ -823,6 +823,7 @@ ul#faq > li > ul > li {
   .rightside {
   float: right;
   margin: 15px;
+  max-width: 70%;
   }
   .textbox {
   border-left: 5px solid;

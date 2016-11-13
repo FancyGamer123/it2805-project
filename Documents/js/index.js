@@ -76,7 +76,7 @@ let reviewList = [
 {img:"2.png", link:"smartie2.html", title:"Owlboy Review", text:"Owlboy is a game about weakness, but for its lovable cast of characters, individual weaknesses only strengthen"},
 {img:"3.png", link:"smartie3.html", title:"Hitman Episode 6: Hokkaido Review", text:"Io Interactive’s episodic Hitman experiment is over – or at least, the first season is anyhow. The end result"},
 {img:"4.png", link:"smartie4.html", title:"The Elder Scrolls V: Skyrim Special Edition PC Review", text:"When I play a remastered version of a game I love, I expect it to be at least as good as the old one in every"},
-{img:"5.png", link:"smartie5.html", title:"Dark Souls 3: Ashes of Ariandel", text:"There’s something for every Dark Souls 3 fan to enjoy in Ashes of Ariandel, the first of two planned DLC packs. "}, //we still don't have 5 reviews ready
+{img:"5.png", link:"smartie5.html", title:"Dark Souls 3: Ashes of Ariandel", text:"There’s something for every Dark Souls 3 fan to enjoy in Ashes of Ariandel, the first of two planned DLC packs. "},
 ]
 for (let i = 0; i < reviewList.length; i++){
 	let a = reviewList[i];
