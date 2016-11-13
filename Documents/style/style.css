@@ -28,7 +28,7 @@ PURPOSE: Make the styling for all pages
     margin: 14px 0 8px;
   }
   body {
-    background-image: url(../images/background.png);
+    background-image: url(../images/background.jpg); /* using jpg (200kB) instead of the original png (5mB) */
     background-size: 100%;
     background-repeat: no-repeat;
     background-color: black;
@@ -113,7 +113,7 @@ PURPOSE: Make the styling for all pages
     }
   }
 
-/* navigation bar, Written by: Sandor Zeestraten and Tony Timmy Tran */
+/* navigation bar and dropdownmenu, Written by: Sandor Zeestraten and Tony Timmy Tran */
   /*
   PURPOSE: Add a clickable dropdown menu with CSS and JS.
   CREDITS: The code is a lightly modified version from the Dropdown Menu in Navbar example from W3Schools.
@@ -168,7 +168,6 @@ PURPOSE: Make the styling for all pages
     display: block;
   }
 
-
 /* main-content-container, Written by: Tony Timmy Tran */
   #main-content-container {
     box-sizing: border-box;
@@ -214,7 +213,6 @@ PURPOSE: Make the styling for all pages
     font-size: 20px;
     margin-top: 20px;
   }
-
 
 /* columns, Written by: Tony Timmy Tran */
   .columns {
@@ -289,7 +287,10 @@ PURPOSE: Make the styling for all pages
     overflow: hidden;
   }
   .big-section > .content .desc p {
-    margin: 0 24px 0 0;
+    margin: 0;
+  }
+  .big-section > .content .desc p, .big-section > .content .desc h4 {
+    margin-right: 24px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -309,7 +310,7 @@ PURPOSE: Make the styling for all pages
     position: relative;
     margin-top: 20px;
     width: 100%;
-    height: 320px;
+    min-height: 218px;
     background-color: #1d1f21;
     box-sizing: border-box;
     border: 1px solid black;
@@ -318,6 +319,12 @@ PURPOSE: Make the styling for all pages
 
   .small-section > .sectionbar > div {
     margin-left: 16px;
+  }
+
+  .small-section .toplist-ol { /* selecting "toplist-ol"-class instead of "ol"-tag because it could have been other lists in small-section */
+    line-height: 1.7em;
+    list-style-position:inside;
+    padding-left:30px;
   }
 
 /* footer, Written by: Tony Timmy Tran */
@@ -476,8 +483,9 @@ PURPOSE: Make the styling for all pages
   .slideshow > .buttons > .dots > div {
     pointer-events: auto;
     cursor: default;
-    width:150px; height: 100%;
-    padding-top:10px;
+    display: inline-block;
+    min-width: 100px; height: 100%; /* the width depends on the amount of dots inside */
+    padding: 10px 14px 0 14px;
     margin: auto;
     border-radius: 10px;
     background-color: rgba(29,31,33, 0.4);
