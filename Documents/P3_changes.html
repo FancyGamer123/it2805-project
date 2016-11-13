@@ -1,375 +1,413 @@
 <!DOCTYPE html>
 <html lang="no">
-    <head>
-        <title>IT2805: P3 Design Changes</title>
-        <meta charset="utf-8" />
+	<head>
+		<title>IT2805: P3 Design Changes</title>
+		<meta charset="utf-8" />
 
-        <style>
-            body {
-                color: #333;
-                line-height: 150%;
-            }
+		<style>
+			body {
+				color: #333;
+				line-height: 150%;
+			}
 
-            article, #cover {
-                width: 960px;
-                margin: auto;
-                font-size: 20px;
-            }
+			article, #cover {
+				width: 960px;
+				margin: auto;
+				font-size: 20px;
+			}
 
-            h1 {
-                font-size: 3em;
-                margin-bottom: 0;
-            }
+			h1 {
+				font-size: 3em;
+				margin-bottom: 0;
+			}
 
-            p {
-                max-width: 75ch;
-            }
+			p {
+				max-width: 75ch;
+			}
 
-            p, blockquote, ul, ol {
-                font-size: 1em;
-                line-height: 1.5em;
-            }
+			p, blockquote, ul, ol {
+				font-size: 1em;
+				line-height: 1.5em;
+			}
 
-            table, th, td {
-                border: 1px solid black;
-                border-collapse: separate;
-                empty-cells: hide;
-            }
+			table, th, td {
+				border: 1px solid black;
+				border-collapse: separate;
+				empty-cells: hide;
+			}
 
-        </style>
-    </head>
-    <body>
-        <article>
-            <header>
-                <h1>IT2805: P3 Design Changes</h1>
-                <p>Av: Timmy Tran, Hendrik Dahle, Håvard Løkensgard, Sandor Zeestraten</p>
-                <p>Publisert: <time datetime="2016-11-12">12 November, 2016</time></p>
-            </header>
+		</style>
+	</head>
+	<body>
+		<article>
+			<header>
+				<h1>IT2805: P3 Design Changes</h1>
+				<p>Av: Tony Timmy Tran, Hendrik Dahle, Håvard Løkensgard, Sandor Zeestraten</p>
+				<p>Publisert: <time datetime="2016-11-12">12 November, 2016</time></p>
+			</header>
 
-            <hr>
+			<hr>
 
-            <section>
-                <h2>2. Administrative detaljer</h2>
-                <ul>
-                    <li><strong>Kundenavn:</strong> Olga Pedersen</li>
-                    <li><strong>Organisasjon:</strong> Det Frie Student Gamer Laget</li>
-                    <li><strong>Link til siden:</strong> <a href="http://folk.ntnu.no/tonytt/Documents/index.html">http://folk.ntnu.no/tonytt/Documents/index.html</a></li>
-                </ul>
-            </section>
+			<section>
+				<h2>2. Administrative detaljer</h2>
+				<ul>
+					<li><strong>Kundenavn:</strong> Olga Pedersen</li>
+					<li><strong>Organisasjon:</strong> Det Frie Student Gamer Laget</li>
+					<li><strong>Link til siden:</strong> <a href="http://folk.ntnu.no/tonytt/Documents/index.html">http://folk.ntnu.no/tonytt/Documents/index.html</a></li>
+				</ul>
+			</section>
 
-            <section>
-                <h2>3. Endringer</h2>
+			<section>
+				<h2>3. Endringer</h2>
 
-                <!-- ENDRINGER PÅ FILER -->
-                <h3>Endringer på index.html</h3>
-                <p>Endret </p>
+				<!-- ENDRINGER PÅ FILER -->
+				<h3>Endringer på index.html</h3>
+				<p>Endret bort "topplisten" og "følg oss" seksjonene og byttet inn "recommended sites" og "recommended games"</p>
 
-                <h3>Endringer på blimedlem.html</h3>
-                <p>Endret </p>
+				<h3>Endringer på blimedlem.html</h3>
+				<p>Endret </p>
 
-                <h3>Endringer på galleri.html</h3>
-                <p>Endret </p>
+				<h3>Endringer på galleri.html</h3>
+				<p>Endret på utseende til galleriet slik at den ser akkurat ut som den i newsfeed in index.html.</p>
 
-                <h3>Endringer på omtaler.html</h3>
-                <p>Endret </p>
+				<h3>Endringer på omtaler.html</h3>
+				<p>Endret navnet til omtaler1.html og omtaler2.html</p>
 
-                <h3>Endringer på kontakt.html</h3>
-                <p>Endret til kontaktoss.html og fjernet kartet som viser lokasjonen til laget da det allerede finnes i footeren.</p>
+				<h3>Endringer på artikler.html</h3>
+				<p>Endret navnet til artikler1.html og artikler2.html</p>
 
-                <h3>Endringer på joinuspopup.js</h3>
-                <p>Endret til å vise popup-en først etter 4 page views og så aldri igjen for å unngå å plage brukeren.</p>
+				<h3>Endringer på kontakt.html</h3>
+				<p>Endret til kontaktoss.html og fjernet kartet som viser lokasjonen til laget da det allerede finnes i footeren.</p>
 
+				<h3>Endringer på formvalidator.js</h3>
+				<p>Vi har bestemt å ikke ha denne funksjonaliteten. Vi bruker HTML5 sin innebygde formvalidator</p>
 
-                <!-- TILLEGG -->
-                <h3>Tilleggsfil meta.html</h3>
-                <p>Vi la til en HTML template som inneholder metadata elementer i head som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
+				<h3>Endringer på joinuspopup.js</h3>
+				<p>Endret til å vise popup-en først etter 4 page views og så aldri igjen for å unngå å plage brukeren.</p>
 
-                <h3>Tilleggsfil header.html</h3>
-                <p>Vi la til en HTML template som inneholder header og navbar som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
-
-                <h3>Tilleggsfil footer.html</h3>
-                <p>Vi la til en HTML template som inneholder footer som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
-
-                <h3>Tilleggsfil joinuspopup.html</h3>
-                <p>Vi la til en HTML template som inneholder popup elementene som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
-
-                <h3>Tilleggsfil scripts.html</h3>
-                <p>Vi la til en HTML template som laster inn alle JavaScript-skriptene som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
+				<h3>Endringer på dropdownmenu.js</h3>
+				<p>Endret til å vise dropdown bare når en brukeren trykker på "Mer". Dette er gjort for at nettsiden skal ha samme funksjonalitet på en touch enhet.</p>
 
 
-                <!-- ENDRINGER PÅ STYLE -->
-                <h3>TODO: Endringer på styling</h3>
-                <ul>
-                    <li>Font: Arial, Helvetica, sans-serif for både header, body og footer</li>
-                    <li>Color scheme: Mørke farger for nettsiden generelt</li>
-                    <li>Body width: 75%</li>
-                    <li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
-                    <li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
-                    <li>Background Image: Gaming relatert bilde som dekker siden</li>
-                </ul>
+				<!-- TILLEGG -->
+				<h3>Tilleggsfil meta.html</h3>
+				<p>Vi la til en HTML template som inneholder metadata elementer i head som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
-                <!-- KRAV -->
-                <h3>TODO: Javascript krav 1: articleloader.js</h3>
-                <p>Timmy har oppfylt kravet av å dynamisk laste inn artikler.</p>
+				<h3>Tilleggsfil header.html</h3>
+				<p>Vi la til en HTML template som inneholder header og navbar som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
-                <h3>Javascript krav 2: leetspeak.js</h3>
-                <p>Håvard har oppfylt JavaScript-kravet med å implementere en easter egg på siden som konverterer noe av teksten til Leetspeak. Den kan testes ved å klikke på "Bli medlem!"-knappen øverst til høyre.</p>
+				<h3>Tilleggsfil footer.html</h3>
+				<p>Vi la til en HTML template som inneholder footer som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
-                <h3>Javascript krav 3: slideshow.js</h3>
-                <p>Timmy har oppfylt JavaScript-kravet med å implementere en dynamisk slideshow for å vise både bilder og artikeltekst.</p>
+				<h3>Tilleggsfil joinuspopup.html</h3>
+				<p>Vi la til en HTML template som inneholder popup elementene som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
-                <h3>Javascript krav 4: joinuspopup.js</h3>
-                <p>Sandor har oppfylt JavaScript-kravet med å implementere en enkel popup som vises for nye besøkende for å appellere dem til å bli medlem. Implementasjonen bruker localStorage så for den må cleares for testing.</p>
+				<h3>Tilleggsfil scripts.html</h3>
+				<p>Vi la til en HTML template som laster inn alle JavaScript-skriptene som blir inkludert på alle sider ved hjelp av Apache SSI.</p>
 
-                <h3>Modulæritets krav:</h3>
-                <p>
-                    Vi har brukt en kombinasjon av Apache SSI og JavaScript for å oppfylle modulæritets-kravet.
-                    Vi bruker SSI for å laste inn meta.html, header.html, footer.html og joinuspopup.html HTML templatene på alle sidene.
-                    Webserveren siden kjører på er derfor avhengig av å kjøre Apache og hvor SSI modulen er slått på.
-                    Apache instillingene settes så i .htaccess filen.
-                    Sandor stod for proof of concept med Apache og selve implementasjonen av config, men templatene som ble brukt ble skrevet av alle.
-                </p>
-                <p>
-                    JavaScript brukes så for å laste inn bilder i slideshow og artikler. Timmy stod for implmentasjonen.
-                </p>
+				<h3>Tilleggsfil dummyX.html</h3>
+				<p>Hver artikkel har sin egen html fil</p>
 
-                <h3>Arbeidsoppgaver</h3>
-                <p>
-                    Listen under viser minimmumskravene til enkeltpersonene med oppdatert informasjon om de ble utført eller ikke.
-                    Listen inneholder også ny arbeidsoppgaver som ble lagt til under utviklingen av siden.
-                </p>
-                <p>Uthevet skrift representerer oppdatering, mens skrift som er strøket over representerer gammel/endret informasjon.</p>
+				<h3>Tilleggsfil smartieX.html</h3>
+				<p>Hver omtale har sin egen html fil</p>
 
-                <table>
-                    <tr>
-                        <th>Filnavn</th>
-                        <th>Beskrivelse</th>
-                        <th>Ansvarlig</th>
-                    </tr>
-                    <tr>
-                        <td>index.html</td>
-                        <td>Hjemmesiden</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td>artikler.html</td>
-                        <td>Artikler om spill</td>
-                        <td>Henrik</td>
-                    </tr>
-                    <tr>
-                        <td>kontakt.html</td>
-                        <td>Kontaktinformasjon til laget</td>
-                        <td>Håvard</td>
-                    </tr>
-                    <tr>
-                        <td>galleri.html</td>
-                        <td>Galleri med bilder av spill</td>
-                        <td><b>Timmy</b> <del>Sandor</del></td>
-                    </tr>
-                    <tr>
-                        <td>info.html</td>
-                        <td>Informasjon om laget</td>
-                        <td><b>Sandor</b><del>Timmy</del></td>
-                    </tr>
-                    <tr>
-                        <td>omtaler.html</td>
-                        <td>Omtaler av spill</td>
-                        <td>Henrik</td>
-                    </tr>
-                    <tr>
-                        <td>blimedlem.html</td>
-                        <td>Hvordan bli medlem</td>
-                        <td>Håvard</td>
-                    </tr>
-                    <tr>
-                        <td>faq.html</td>
-                        <td>Ofte stilte spørsmål</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>meta.html</b></td>
-                        <td>SSI template for metadata elementene på alle sidene</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td><b>header.html</b></td>
-                        <td>SSI template for header på alle sidene</td>
-                        <td>Timmy og Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>footer.html</b></td>
-                        <td>SSI template for footer på alle sidene</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td><b>scripts.html</b></td>
-                        <td>SSI template for alle JS-skriptene på alle sidene</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>joinuspopup.html</b></td>
-                        <td>SSI template for popupen på alle sidene</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td>style.css</td>
-                        <td>CSS stylesheet</td>
-                        <td>Alle</td>
-                    </tr>
-                    <tr>
-                        <td>logo.png</td>
-                        <td>Logoen til laget</td>
-                        <td><b>Timmy </b> <del> Håvard</del></td>
-                    </tr>
-                    <tr>
-                        <td>background.png</td>
-                        <td>Bakgrunnsbilde for alle sidene</td>
-                        <td><b>Timmy </b> <del> Håvard</del></td>
-                    </tr>
-                    <tr>
-                        <td><b>bar.png</b></td>
-                        <td>Illustrasjon for navigasjonsbar</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td><b>info_page.jpg</b></td>
-                        <td>Stock bilde for infosiden</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>mazemap.png</b></td>
-                        <td>Thumbnail for Mazemap</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>articles/texts/*.xml</b></td>
-                        <td>Placeholder XML artikler</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td><b>buttons/arrow_next.svg, buttons/arrow_prev.svg</b></td>
-                        <td>SVG grafikk for piler frem og tilbake for slideshows</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td><del>formvalidator.js</del></td>
-                        <td>JS for å validere kontakskjemaet</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td>dropdownmenu.js</td>
-                        <td>JS for å lage en drop-down meny i navigasjonsbaren</td>
-                        <td><b>Sandor </b> <del> Henrik</del></td>
-                    </tr>
-                    <tr>
-                        <td>leetspeak.js</td>
-                        <td>JS for konvertere teksten på siden til leetspeak</td>
-                        <td>Håvard</td>
-                    </tr>
-                    <tr>
-                        <td>joinuspopup.js</td>
-                        <td>JS for å lage en pop up til nye besøkende</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>slideshow.js</b></td>
-                        <td>JS for å lage et slideshow</td>
-                        <td>Timmy</td>
-                    </tr>
-                    <tr>
-                        <td><b>.htaccess</b></td>
-                        <td>Apache konfigurasjonsfil for enable SSI</td>
-                        <td>Sandor</td>
-                    </tr>
-                    <tr>
-                        <td><b>Siste kontroll</b></td>
-                        <td>Dobbelt skjekke om alt er slik det skal være</b></td>
-                        <td>Alle</td>
-                    </tr>
-                </table>
-            </section>
 
-            <section>
-                <h2>4. Oppdatert plan</h2>
+				<!-- ENDRINGER PÅ STYLE -->
+				<!--<h3>TODO: Endringer på styling</h3>
+				<ul>
+					<li>Font: Arial, Helvetica, sans-serif for både header, body og footer</li>
+					<li>Color scheme: Mørke farger for nettsiden generelt</li>
+					<li>Body width: 75%</li>
+					<li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
+					<li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
+					<li>Background Image: Gaming relatert bilde som dekker siden</li>
+				</ul>-->
+				<h3>Endringer på styling</h3>
+				<ul>
+					<li>Font: "Helvetica, Arial, sans-serif" for både header, body og footer</li>
+					<li>Color scheme: Oransje farge sammen med mørke/sorte farger for nettsiden generelt</li>
+					<li>Body width: 60% + 100px. Minste bredde for hele siden er 525px</li>
+					<li>Header: Headeren vil bestå av det fulle navnet til laget, altså Det Frie Student Gamer Laget, samt en logo på venstre siden</li>
+					<li>Footer: Footer vil innholde kontaktinfo, mer info om laget samt et kart over lokasjonen til laget</li>
+					<li>Background Image: Gaming relatert bilde som dekker siden</li>
+				</ul>
 
-                <h3>Endelig filstruktur</h3>
-                <ul>
-                    <li>index.html</li>
-                    <li>artikler.html</li>
-                    <li>kontaktoss.html</li>
-                    <li>galleri.html</li>
-                    <li>info.html</li>
-                    <li>omtaler.html</li>
-                    <li>blimedlem.html</li>
-                    <li>faq.html</li>
-                    <li>.htaccess</li>
-                    <li>
-                        templates/
-                        <ul>
-                            <li>meta.html</li>
-                            <li>header.html</li>
-                            <li>footer.html</li>
-                            <li>joinuspopup.html</li>
-                            <li>scripts.html</li>
-                        </ul>
-                    </li>
-                    <li>
-                        css/
-                        <ul>
-                            <li>style.css</li>
-                        </ul>
-                    </li>
-                    <li>
-                        articles/
-                        <ul>
-                            <li>
-                                images/
-                                <ul>
-                                    <li>1.jpg</li>
-                                    <li>...</li>
-                                    <li>6.jpg</li>
-                                </ul>
-                            </li>
-                            <li>
-                                texts/
-                                <ul>
-                                    <li>1.xml</li>
-                                    <li>...</li>
-                                    <li>5.xml</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        buttons/
-                        <ul>
-                            <li>arrow_next.svg</li>
-                            <li>arrow_prev.svg</li>
-                        </ul>
-                    </li>
-                    <li>
-                        images/
-                        <ul>
-                            <li>logo.png</li>
-                            <li>background.png</li>
-                            <li>info_page.jpg</li>
-                            <li>bar.png</li>
-                            <li>mazemap.png</li>
-                        </ul>
-                    </li>
-                    <li>
-                        js/
-                        <ul>
-                            <li>slideshow.js</li>
-                            <li>dropdownmenu.js</li>
-                            <li>leetspeak.js</li>
-                            <li>joinuspopup.js</li>
-                        </ul>
-                    </li>
-                </ul>
+				<!-- KRAV -->
+				<h3>Javascript krav 1: list_item.js</h3>
+				<p>Timmy har oppfylt JavaScript-kravet med å dynamisk laste inn elementer i en liste.</p>
 
-            </section>
+				<h3>Javascript krav 2: leetspeak.js</h3>
+				<p>Håvard har oppfylt JavaScript-kravet med å implementere en easter egg på siden som konverterer noe av teksten til Leetspeak. Den kan testes ved å klikke på "Bli medlem!"-knappen øverst til høyre.</p>
 
-        </article>
-    </body>
+				<h3>Javascript krav 3: slideshow.js</h3>
+				<p>Timmy har oppfylt JavaScript-kravet med å implementere en dynamisk slideshow for å vise både bilder og artikeltekst. Det er brukt JavaScript sammen med CSS-transitions for å oppnå dette.</p>
+
+				<h3>Javascript krav 4: joinuspopup.js</h3>
+				<p>Sandor har oppfylt JavaScript-kravet med å implementere en enkel popup som vises for nye besøkende for å appellere dem til å bli medlem. Implementasjonen bruker localStorage så for den må cleares for testing.</p>
+
+				<h3>Modulæritets krav:</h3>
+				<p>
+					Vi har brukt en kombinasjon av Apache SSI og JavaScript for å oppfylle modulæritets-kravet.
+					Vi bruker SSI for å laste inn meta.html, header.html, footer.html og joinuspopup.html HTML templatene på alle sidene.
+					Webserveren siden kjører på er derfor avhengig av å kjøre Apache og hvor SSI modulen er slått på.
+					Apache instillingene settes så i .htaccess filen.
+					Sandor stod for proof of concept med Apache og selve implementasjonen av config, men templatene som ble brukt ble skrevet av alle.
+				</p>
+				<p>
+					JavaScript brukes så for å laste inn lage slideshow og list-items. Timmy stod for implementasjonen.
+				</p>
+
+				<h3>Arbeidsoppgaver</h3>
+				<p>
+					Listen under viser minimmumskravene til enkeltpersonene med oppdatert informasjon om de ble utført eller ikke.
+					Listen inneholder også ny arbeidsoppgaver som ble lagt til under utviklingen av siden.
+				</p>
+				<p>Uthevet skrift representerer oppdatering, mens skrift som er strøket over representerer gammel/endret informasjon.</p>
+
+				<table>
+					<tr>
+						<th>Filnavn</th>
+						<th>Beskrivelse</th>
+						<th>Ansvarlig</th>
+					</tr>
+					<tr>
+						<td>index.html</td>
+						<td>Hjemmesiden</td>
+						<td>Timmy</td>
+					</tr>
+					<tr>
+						<td>kontaktoss.html</td>
+						<td>Kontaktinformasjon til laget</td>
+						<td>Håvard</td>
+					</tr>
+					<tr>
+						<td>galleri.html</td>
+						<td>Galleri med bilder av spill</td>
+						<td><b>Timmy</b> <del>Sandor</del></td>
+					</tr>
+					<tr>
+						<td>info.html</td>
+						<td>Informasjon om laget</td>
+						<td><b>Sandor</b><del>Timmy</del></td>
+					</tr>
+					<tr>
+						<td>blimedlem.html</td>
+						<td>Hvordan bli medlem</td>
+						<td>Håvard</td>
+					</tr>
+					<tr>
+						<td>faq.html</td>
+						<td>Ofte stilte spørsmål</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td>style/style.css</td>
+						<td>CSS stylesheet</td>
+						<td>Alle</td>
+					</tr>
+					<tr>
+						<td><b>templates/meta.html</b></td>
+						<td>SSI template for metadata elementene på alle sidene</td>
+						<td>Timmy og Sandor</td>
+					</tr>
+					<tr>
+						<td><b>templates/header.html</b></td>
+						<td>SSI template for header på alle sidene</td>
+						<td>Timmy og Sandor</td>
+					</tr>
+					<tr>
+						<td><b>templates/footer.html</b></td>
+						<td>SSI template for footer på alle sidene</td>
+						<td>Timmy</td>
+					</tr>
+					<tr>
+						<td><b>templates/scripts.html</b></td>
+						<td>SSI template for alle JS-skriptene på alle sidene</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td><b>templates/joinuspopup.html</b></td>
+						<td>SSI template for popupen på alle sidene</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td>docs/artikler*.html</td>
+						<td>Artikler om spill</td>
+						<td>Henrik</td>
+					</tr>
+					<tr>
+						<td>docs/omtaler*.html</td>
+						<td>Omtaler av spill</td>
+						<td>Henrik</td>
+					</tr>
+					<tr>
+						<td>images/logo.png</td>
+						<td>Logoen til laget</td>
+						<td><b>Timmy </b> <del> Håvard</del></td>
+					</tr>
+					<tr>
+						<td>images/background.jpg</td>
+						<td>Bakgrunnsbilde for alle sidene</td>
+						<td><b>Timmy </b> <del> Håvard</del></td>
+					</tr>
+					<tr>
+						<td><b>images/bar.png</b></td>
+						<td>Illustrasjon for navigasjonsbar</td>
+						<td>Timmy</td>
+					</tr>
+					<tr>
+						<td><b>images/info_page.jpg</b></td>
+						<td>Stock bilde for infosiden</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td><b>images/mazemap.png</b></td>
+						<td>Thumbnail for Mazemap</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td><b>images/buttons/arrow_*.svg</b></td>
+						<td>SVG grafikk for piler frem og tilbake for slideshows</td>
+						<td>Timmy</td>
+					</tr>
+					<tr>
+						<td><b>articles/texts/*.xml</b></td>
+						<td>Placeholder XML artikler</td>
+						<td>Timmy</td>
+					</tr>
+					<tr>
+						<td><del>formvalidator.js</del></td>
+						<td><del>JS for å validere kontakskjemaet</del></td>
+						<td><del>Timmy</del></td>
+					</tr>
+					<tr>
+						<td>dropdownmenu.js</td>
+						<td>JS for å lage en drop-down meny i navigasjonsbaren</td>
+						<td><b>Sandor </b> <del> Henrik</del></td>
+					</tr>
+					<tr>
+						<td>leetspeak.js</td>
+						<td>JS for konvertere teksten på siden til leetspeak</td>
+						<td>Håvard</td>
+					</tr>
+					<tr>
+						<td>joinuspopup.js</td>
+						<td>JS for å lage en pop up til nye besøkende</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td><b>slideshow.js</b></td>
+						<td>JS for å lage et slideshow</td>
+						<td>Timmy</td>
+					</tr>
+					<tr>
+						<td><b>.htaccess</b></td>
+						<td>Apache konfigurasjonsfil for enable SSI</td>
+						<td>Sandor</td>
+					</tr>
+					<tr>
+						<td><b>Siste kontroll</b></td>
+						<td>Dobbelt skjekke om alt er slik det skal være</b></td>
+						<td>Alle</td>
+					</tr>
+				</table>
+			</section>
+
+			<section>
+				<h2>4. Oppdatert plan</h2>
+
+				<h3>Endelig filstruktur</h3>
+				<ul>
+					<li>index.html</li>
+					<li>kontaktoss.html</li>
+					<li>galleri.html</li>
+					<li>info.html</li>
+					<li>blimedlem.html</li>
+					<li>faq.html</li>
+					<li>.htaccess</li>
+					<li>templates/
+						<ul>
+							<li>meta.html</li>
+							<li>header.html</li>
+							<li>footer.html</li>
+							<li>joinuspopup.html</li>
+							<li>scripts.html</li>
+						</ul>
+					</li>
+					<li>style/
+						<ul><li>style.css</li></ul>
+					</li>
+					<li>docs/
+						<ul>
+							<li>artikler*.html</li>
+							<li>omtaler*.html</li>
+							<li>slideshow/
+								<ul><li>*.jpg</li></ul>
+							</li>
+							<li>newsfeed/
+								<ul>
+									<li>images/
+										<ul><li>*.jpg</li></ul>
+									</li>
+									<li>texts/
+										<ul><li>*.xml</li></ul>
+									</li>
+								</ul>
+							</li>
+							<li>articles/
+								<ul>
+									<li>*.html</li>
+									<li>images/
+										<ul><li>*.png</li></ul>
+									</li>
+									<li>images_62x62/
+										<ul><li>*.png</li></ul>
+									</li>
+								</ul>
+							</li>
+							<li>reviews/
+								<ul>
+									<li>*.html</li>
+									<li>images/
+										<ul><li>*.png</li></ul>
+									</li>
+									<li>images_62x62/
+										<ul><li>*.png</li></ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>images/
+						<ul>
+							<li>logo.png</li>
+							<li>background.jpg</li>
+							<li>info_page.jpg</li>
+							<li>bar.png</li>
+							<li>mazemap.png</li>
+							<li>buttons/
+								<ul>
+									<li>arrow_next.svg</li>
+									<li>arrow_prev.svg</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>js/
+						<ul>
+							<li>index.js</li>
+							<li>galleri.js</li>
+							<li>dropdownmenu.js</li>
+							<li>leetspeak.js</li>
+							<li>joinuspopup.js</li>
+							<li>slideshow.js</li>
+							<li>list_item.js</li>
+						</ul>
+					</li>
+				</ul>
+
+			</section>
+
+		</article>
+	</body>
 </html>
