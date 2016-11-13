@@ -180,6 +180,7 @@ PURPOSE: Make the styling for all pages
     right:16px;
     top:0;
     overflow:hidden;
+    -webkit-transition: 0.6s ease;
     transition: 0.6s ease;
   }
   #leetspeak-btn:hover {
@@ -247,12 +248,10 @@ PURPOSE: Make the styling for all pages
   .columns > .c1{
     width: calc(65% - 10px);
     padding-right: 10px;
-    background: blaue;
   }
   .columns > .c2{
     width: calc(35% - 10px);
     padding-left: 10px;
-    background: raed;
   }
   @media only screen and (max-width: 750px) {
     .columns > .c1, .columns > .c2{
@@ -446,10 +445,12 @@ PURPOSE: Make the styling for all pages
     margin-left: 100%;
   }
   .slideshow > .img-move-left { /*this is intended to be added and removed by javascript*/
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     left: 100%;
   }
   .slideshow > .img-move-right { /*this is intended to be added and removed by javascript*/
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     left: -100%;
   }
@@ -530,6 +531,7 @@ PURPOSE: Make the styling for all pages
     margin: 0 5px;
     border-radius: 50%;
     background-color: white;
+    -webkit-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
     box-shadow: 2px 2px 3px rgba(0,0,0,0.8);
   }
@@ -560,11 +562,12 @@ PURPOSE: Make the styling for all pages
     margin-left: 100%;
   }
   .slideshow + .description > .desc-move-left { /*this is intended to be added and removed by javascript*/
+    -webkit-transition: 0.5s;
     transition: 0.5s;
     left: 100%;
   }
   .slideshow + .description > .desc-move-right { /*this is intended to be added and removed by javascript*/
-    transition: 0.5s;
+    -webkit-transition: 0.5s;
     left: -100%;
   }
 
@@ -710,13 +713,22 @@ ul#faq > li > ul > li {
   }
 
 /* Article and review section, Written by Henrik Dahle */
-  .inlineImg {
+  .articleInlineImg {
   float: left;
   background-color: white;
   box-sizing: border-box;
   border: 1px solid black;
   width: 100px;
   height: 100px;
+  margin: 15px 15px;
+  }
+  .reviewInlineImg {
+  float: left;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 140px;
+  height: 140px;
   margin: 15px 15px;
   }
   .articleCont {
@@ -734,6 +746,10 @@ ul#faq > li > ul > li {
   overflow: hidden;
   }
   .articleText > p {
+  margin: 0;
+  }
+  .articleText h3 {
+  font-weight: normal;
   margin: 0;
   }
   #navbar-bottom {
@@ -755,10 +771,6 @@ ul#faq > li > ul > li {
   }
   .chevron {
   font-size: 3em;
-  }
-  .articleText h3 {
-  font-weight: normal;
-  margin: 0;
   }
   .gone {
   visibility: hidden;
