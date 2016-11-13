@@ -763,7 +763,6 @@ ul#faq > li > ul > li {
   .gone {
   visibility: hidden;
   }
-
   .reviewCont {
   margin: -1px;
   position: relative;
@@ -772,27 +771,34 @@ ul#faq > li > ul > li {
   background-color: #1d1f21;
   border: 1px solid black;
   }
-  .reviewText {
+  .reviewBody {
   position: relative;
   top: 15px;
   max-height: 140px;
   overflow: hidden;
   }
-  .reviewText > p {
+  .reviewBody > p {
   margin: 0;
   }
-  .reviewText h3 {
+  .reviewBody h3 {
   font-weight: normal;
   margin: 0;
   }
-  .reviewText h2 {
+  .reviewBody h2 {
   border: 1px solid red;
   display: inline-block;
   border-radius: 1em;
   padding: 5px;
   padding-left: 15px;
   padding-right: 15px;
+  margin: 0;
   color: white;
+  }
+  .reviewText {
+  height: 85px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  padding: 0;
   }
  /* End of article and review section */
 
